@@ -1,0 +1,575 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  .main_container {
+    width: 100%;
+    background: {{ section.settings.section_bg_color }};
+    background-image: url({{ section.settings.back_image | image_url }});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .section_width {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px;
+  }
+  .slider_content {
+    width: 100%;
+  }
+  .main_container   .heading_box {
+    padding-left:23px;
+   }
+  .heading_box {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 3rem 0;
+    justify-content: space-between;
+  }
+  .comment_box {
+    width: 50%;
+    display: flex;
+    align-items: start;
+    gap: 12px;
+  }
+  .comment_box img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+  .comment_box p {
+    font-size: {{ section.settings.heading_size }}px;
+    line-height: {{ section.settings.heading_line_height }};
+    font-weight: 900;
+    color: {{ section.settings.heading_color }};
+    margin: 0;
+ 
+  }
+  .slider_boxes {
+    width: 100%;
+  }
+  .cardsSwiper {
+    padding-top: 10rem !important;
+    margin-top: -6.5rem !important;
+    margin-bottom: -3.5rem ;
+    padding-bottom: 6.5rem !important;
+  }
+  .black_card {
+    background-color: {{ section.settings.dark_card_bg_color }} !important;
+  }
+  .main_card {
+    width: 100%;
+    background-color: {{ section.settings.card_bg_color }};
+    border-radius: 20px;
+    padding: {{ section.settings.card_padding }}px;
+ box-shadow: 0px 5px 20px #00000042;
+  }
+  .card_img img {
+    width: 49px;
+    height: 49px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .customer_profile {
+    display: flex;
+    align-items: start;
+    margin-top:4rem;
+  }
+  .card_text_area {
+    margin-left: 10px;
+  }
+  .card_text_area span {
+    color: {{ section.settings.card_text_color }};
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 5px;
+    line-height: 1.2;
+    display: block;
+  }
+  .card_text_area p {
+    color: {{ section.settings.card_text_color }};
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.2;
+  }
+  .card_dis {
+    margin-top: 2rem;
+  }
+  .card_dis p {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: {{ section.settings.card_text_color }};
+    margin: 0;
+  }
+  .next_btn,
+  .prev_btn {
+    top: 25px !important;
+    width: 52px !important;
+    height: 52px !important;
+    border: {{ section.settings.btn_border_width }}px solid {{ section.settings.btn_border_color }} !important;
+    border-radius: {{ section.settings.btn_border_radius }}px !important;
+  }
+  .next_btn i,
+  .prev_btn i {
+    color: {{ section.settings.btn_icon_color }};
+  }
+  .card_text_area_white span,
+  .card_text_area_white p,
+  .card_text_area_white {
+    color: {{ section.settings.dark_card_text_color }} !important;
+  }
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after,
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    display: none;
+  }
+  .next_btn {
+    background-color: {{ section.settings.next_btn_bg }};
+  }
+  .prev_btn {
+    background-color: {{ section.settings.prev_btn_bg }};
+    left: auto !important;
+    right: 70px !important;
+  }
+  .next_btn:after,
+  .prev_btn:after {
+    font-size: 20px !important;
+    color: {{ section.settings.btn_icon_color }} !important;
+  }
+  .slider_button {
+    margin-top: 3rem;
+    text-align: center;
+    position: relative;
+  }
+  .slider_button a {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 300;
+    color: #fff;
+    background-color: #000;
+    padding: 27px 32px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0;
+  }
+  .slider_button i {
+    font-size: 14px;
+    margin-right: 0.7rem;
+  }
+
+  .slide_pad{
+    padding: 0 20px !important;
+  }
+
+  @media screen and (max-width: 1140px) {
+    .comment_box p {
+      font-size: 50px;
+      line-height: 1.5;
+    }
+    .next_btn, .prev_btn {
+      height: 44px !important;
+      width: 44px !important;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .cardsSwiper {
+      margin-top: -5rem !important;
+      padding-top: 8rem !important;
+    }
+    .comment_box p {
+      font-size: 40px;
+      line-height: 1.5;
+    }
+    .next_btn,
+    .prev_btn {
+      top: 25px !important;
+      width: 38px !important;
+      height: 38px !important;
+    }
+    .next_btn:after,
+    .prev_btn:after {
+      font-size: 13px !important;
+    }
+    .prev_btn {
+      right: 58px !important;
+    }
+  }
+  @media screen and (max-width: 680px) {
+    .heading_box {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .main_heading,
+    .comment_box {
+      width: 100%;
+      text-align: center;
+    }
+    .next_btn,
+    .prev_btn {
+      top: auto !important;
+      width: 38px !important;
+      height: 38px !important;
+      bottom: 5px !important;
+    }
+    .comment_box {
+      padding-bottom: 1.5rem;
+      justify-content: center;
+    }
+    .cardsSwiper {
+      margin-top: -0.5rem !important;
+      padding-top: 20px !important;
+    }
+    .comment_box p {
+      font-size: 34px;
+      line-height: 1.1;
+    }
+    .section_width {
+        padding: 50px 0 70px;
+    }
+  }
+</style>
+
+<div class="main_container">
+  <div class="section_width">
+    <div class="slider_content">
+      <div class="heading_box" data-aos="fade-right" data-aos-once="true" data-aos-duration="1500">
+        <div class="comment_box">
+          <p>{{ section.settings.heading_text }}</p>
+        </div>
+      </div>
+      <div class="slider_boxes" data-aos="fade-left" data-aos-once="true" data-aos-duration="1500">
+        <div class="swiper mySwiper cardsSwiper">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+              <div class="swiper-slide slide_pad">
+                <div class="main_card ">
+               
+                  <div class="card_dis ">
+                    <p>{{ block.settings.testimonial_text }}</p>
+                  </div>
+                     <div class="customer_profile">
+                    <div class="card_img">
+                      {% if block.settings.customer_image != blank %}
+                        <img src="{{ block.settings.customer_image | image_url }}" alt="{{ block.settings.customer_name }}"/>
+                      {% else %}
+                        <img src="https://via.placeholder.com/49x49" alt="Customer image"/>
+                      {% endif %}
+                    </div>
+                    <div class="card_text_area {% if block.settings.use_dark_style %}card_text_area_white{% endif %}">
+                      <span>{{ block.settings.customer_name }}</span>
+                      <p>{{ block.settings.customer_title }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-button-prev prev_btn"><i class="fa-solid fa-arrow-left-long"></i></div>
+          <div class="swiper-button-next next_btn"><i class="fa-solid fa-arrow-right-long"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper(".cardsSwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        650: {
+          slidesPerView: 2,
+          spaceBetween: 0,
+        },
+        1024: {
+          slidesPerView: 2.7,
+          spaceBetween: 0,
+        },
+      },
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Testimonial Swiper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Background Color",
+      "default": "#04160b"
+    },
+    {
+      "type": "image_picker",
+      "id": "back_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 400,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top Desktop",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom Desktop",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "min": 0,
+      "max": 400,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top Mobile",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom Mobile",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Heading Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading Text",
+      "default": "See What Dento Matcha Lovers Are Saying!"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#93cb1a"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 20,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "label": "Heading Font Size",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "heading_line_height",
+      "min": 1,
+      "max": 2,
+      "step": 0.1,
+      "label": "Heading Line Height",
+      "default": 1.2
+    },
+    {
+      "type": "header",
+      "content": "Card Settings"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Default Card Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Default Card Text Color",
+      "default": "#1e1e1e"
+    },
+    {
+      "type": "color",
+      "id": "dark_card_bg_color",
+      "label": "Dark Card Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "dark_card_text_color",
+      "label": "Dark Card Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Border Radius",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "min": 20,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Card Padding",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Navigation Buttons"
+    },
+    {
+      "type": "color",
+      "id": "next_btn_bg",
+      "label": "Next Button Background",
+      "default": "#bffb3f"
+    },
+    {
+      "type": "color",
+      "id": "prev_btn_bg",
+      "label": "Prev Button Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "btn_border_color",
+      "label": "Button Border Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "btn_icon_color",
+      "label": "Button Icon Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "btn_border_width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Button Border Width",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "btn_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Button Border Radius",
+      "default": 12
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "use_dark_style",
+          "label": "Use Dark Card Style",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "customer_image",
+          "label": "Customer Image"
+        },
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Customer Name",
+          "default": "John Doe"
+        },
+        {
+          "type": "text",
+          "id": "customer_title",
+          "label": "Customer Title/Position",
+          "default": "CEO of Example Inc"
+        },
+        {
+          "type": "textarea",
+          "id": "testimonial_text",
+          "label": "Testimonial Text",
+          "default": "This is an amazing product that changed my life!"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Swiper",
+      "category": "Custom Sections",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "customer_name": "Mark Ramirez",
+            "customer_title": "Owner of Luna's Inc",
+            "testimonial_text": "Their team took our wellness brand and elevated it to new heights with their thoughtful designs and strategic branding, they've helped us create a cohesive and compelling brand identity."
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "use_dark_style": true,
+            "customer_name": "Job Ghadzi",
+            "customer_title": "CEO Glow Co.",
+            "testimonial_text": "As a fellow creative professional, I have high standards when it comes to design. Kelola not only met but exceeded those standards. Their approach to our website redesign was nothing short of brilliant."
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "customer_name": "Thomas Gala",
+            "customer_title": "Founder ZenTech Wellness",
+            "testimonial_text": "In the fast-paced world of tech, it's crucial to have a creative partner who can keep up with our innovative ideas. Kelola not only kept up but exceeded our expectations."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

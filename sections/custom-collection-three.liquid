@@ -1,0 +1,217 @@
+<section class="three-collection-boxes {{ section.settings.custom_css_Class }}"
+  {% if section.settings.custom_css_id != blank %}
+    id="{{ section.settings.custom_css_id }}"
+  {% else %}
+    id="{{ section.settings.scroll_target_id }}"
+  {% endif %}>
+  <div class="page-width">
+
+    <div class="collection-grid ">
+      {% for block in section.blocks %}
+        {% assign collection = block.settings.collection %}
+        {% if collection != blank %}
+          {% liquid
+            assign collection_image = collection.image
+            if collection_image == blank
+              assign collection_image = collection.featured_image
+            endif
+            if collection_image == blank and collection.products.first
+              assign collection_image = collection.products.first.featured_image
+            endif
+          %}
+
+          <div class="collection-item">
+            <a href="{{ collection.url }}" class="collection-image">
+              <div class="collection-image-wrapper">
+
+                {% if collection_image %}
+                  <img
+                    src="{{ collection_image | image_url: width: 600 }}"
+                    alt="{{ collection.title }}"
+                    loading="lazy"
+                  >
+                {% endif %}
+
+                <div class="collection-overlay">
+                  <span class="collection-title">
+                    {{ collection.title }}
+                  </span>
+
+                  <span class="collection-arrow">
+                    {% comment %} <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 2L9 7L5 12"
+                        stroke="#000"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                    </svg> {% endcomment %}
+                      <img src="https://cdn.shopify.com/s/files/1/0777/4640/5674/files/download_1_1.svg?v=1769508511" alt="Arrow">
+                  </span>
+                </div>
+
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+.three-collection-boxes {
+  padding: 40px 0;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.collection-image {
+  display: block;
+  text-decoration: none;
+}
+
+.collection-image-wrapper {
+  position: relative;
+  background: #fff;
+}
+
+.collection-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+.collection-overlay {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collection-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* CHEVRON BUTTON */
+.collection-arrow {
+  width: 42px;
+  height: 42px;
+  background: #FFD400;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.collection-item:hover .collection-arrow {
+  transform: translateX(4px);
+}
+.slick-next{
+display:none !important;
+}
+}
+.slick-prev{
+display:none !important;
+}
+/* Mobile */
+@media (max-width: 426px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collection-title {
+    font-size: 18px;
+  }
+}
+</style>
+<script>
+$(document).ready(function () {
+
+  var $slider = $('.three-collection-boxes .collection-grid');
+
+  if ($slider.hasClass('slick-initialized')) return;
+
+  // CSS GRID ko JS se disable karo (CSS file ko touch kiye bina)
+  $slider.css({
+    display: 'flex',
+    gridTemplateColumns: 'unset'
+  });
+
+  $slider.slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2,dots: false }
+      },
+      {
+        breakpoint: 600,
+        settings: { slidesToShow: 1 , dots: true,  arrows: false  }
+      }
+    ]
+  });
+
+});
+</script>
+
+
+{% schema %}
+{
+  "name": "3 Collection Boxes",
+  "settings": [
+    {
+      "type": "text",
+      "id": "custom_css_Class",
+      "label": "Custom CSS Class"
+    },
+    {
+      "type": "text",
+      "id": "custom_css_id",
+      "label": "Custom CSS ID (Anchor)"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection Box",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select collection"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "3 Collection Boxes",
+      "blocks": [
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" }
+      ]
+    }
+  ]
+}
+{% endschema %}

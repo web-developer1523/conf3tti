@@ -1,0 +1,221 @@
+<style>
+.announcement-main {
+  width: 100%;
+  background-color: {{ section.settings.bg_color }};
+  overflow: hidden;
+  user-select: none;
+  padding: {{ section.settings.padding_top_bottom }}px 0;
+}
+.announcement-data {
+  width: 100%;
+  display: flex;
+  transition: transform {{ section.settings.animation_speed }}s ease-in-out;
+}
+.announcement-slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+.announcement-slide p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.2;
+  color: {{ section.settings.text_color }};
+  margin: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  text-align: center;
+}
+</style>
+
+<div class="announcement-main">
+  <div class="announcement-data" id="announcementData">
+    {% for block in section.blocks %}
+      <div class="announcement-slide" {{ block.shopify_attributes }}>
+        <p>{{ block.settings.announcement_text }}</p>
+      </div>
+    {% endfor %}
+    {% if section.blocks.size > 0 %}
+      <div class="announcement-slide">
+        <p>{{ section.blocks.first.settings.announcement_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  const container = document.getElementById("announcementData");
+  const slides = document.querySelectorAll(".announcement-slide");
+  const totalSlides = slides.length;
+  let index = 0;
+  let autoPlayInterval;
+  
+  function slideTo(indexTarget) {
+    container.style.transition = "transform {{ section.settings.animation_speed }}s ease-in-out";
+    container.style.transform = `translateX(-${indexTarget * 100}%)`;
+    index = indexTarget;
+  }
+  
+  function slideNext() {
+    slideTo(index + 1);
+    if (index === totalSlides - 1) {
+      setTimeout(() => {
+        container.style.transition = "none";
+        container.style.transform = "translateX(0%)";
+        index = 0;
+      }, {{ section.settings.animation_speed | times: 1000 }});
+    }
+  }
+  
+  function startAutoPlay() {
+    autoPlayInterval = setInterval(slideNext, {{ section.settings.slide_duration }}000);
+  }
+  
+  function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+  }
+  
+  startAutoPlay();
+  
+  let startX = 0;
+  let isDragging = false;
+  
+  document.querySelectorAll(".announcement-slide p").forEach((pTag) => {
+    pTag.addEventListener("mousedown", (e) => {
+      stopAutoPlay();
+      isDragging = true;
+      startX = e.clientX;
+    });
+    
+    pTag.addEventListener("mouseup", (e) => {
+      if (!isDragging) return;
+      const endX = e.clientX;
+      const diff = startX - endX
+      if (diff > 50) {
+        slideNext();
+      } else if (diff < -50) {
+        let newIndex = (index - 1 + totalSlides - 1) % (totalSlides - 1);
+        slideTo(newIndex);
+      }
+      isDragging = false;
+      startAutoPlay();
+    });
+
+    pTag.addEventListener("mouseleave", () => {
+      if (isDragging) {
+        isDragging = false;
+        startAutoPlay();
+      }
+    });
+    
+    pTag.addEventListener("touchstart", (e) => {
+      stopAutoPlay();
+      isDragging = true;
+      startX = e.touches[0].clientX;
+    });
+    
+    pTag.addEventListener("touchend", (e) => {
+      if (!isDragging) return;
+      const endX = e.changedTouches[0].clientX;
+      const diff = startX - endX;
+      if (diff > 50) {
+        slideNext();
+      } else if (diff < -50) {
+        let newIndex = (index - 1 + totalSlides - 1) % (totalSlides - 1);
+        slideTo(newIndex);
+      }
+      isDragging = false;
+      startAutoPlay();
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#222222"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "animation_speed",
+      "min": 0.1,
+      "max": 2,
+      "step": 0.1,
+      "unit": "s",
+      "label": "Animation speed",
+      "default": 0.7
+    },
+    {
+      "type": "range",
+      "id": "slide_duration",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Slide duration",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "padding_top_bottom",
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding top & bottom",
+      "default": 10
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement",
+      "settings": [
+        {
+          "type": "text",
+          "id": "announcement_text",
+          "label": "Text",
+          "default": "Announcement text goes here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Announcement Bar",
+      "category": "Promotional",
+      "blocks": [
+        {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "All-in Pricing: No Tariff Surcharge."
+          }
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "10% Off for New Subscribers"
+          }
+        },
+        {
+          "type": "announcement",
+          "settings": {
+            "announcement_text": "Free Standard Shipping Over US$59"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

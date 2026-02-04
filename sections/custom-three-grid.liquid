@@ -1,0 +1,161 @@
+{% schema %}
+{
+  "name": "Three Column Feature",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "Unwrap more ways to wow."
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Column 1 Title",
+      "default": "You get the ribbon. These bring the bows."
+    },
+    {
+      "type": "textarea",
+      "id": "desc_1",
+      "label": "Column 1 Description",
+      "default": "The best part about gifting these shoes? Watching them step straight into any possibility."
+    },
+     {
+      "type": "text",
+      "id": "shop_btn_1",
+      "label": "Shop Button"
+    },
+    {
+      "type": "url",
+      "id": "url_1",
+      "label": "Column 1 URL"
+    },
+    
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Column 2 Title",
+      "default": "This gift goes everywhere."
+    },
+    {
+      "type": "textarea",
+      "id": "desc_2",
+      "label": "Column 2 Description",
+      "default": "Unbox a bag that's ready for every escape, errand, and adventure to come."
+    },
+    {
+      "type": "text",
+      "id": "shop_btn_2",
+      "label": "Shop Button"
+    },
+
+    {
+      "type": "url",
+      "id": "url_2",
+      "label": "Column 2 URL"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3"
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Column 3 Title",
+      "default": "Redeem the joy."
+    },
+    {
+      "type": "textarea",
+      "id": "desc_3",
+      "label": "Column 3 Description",
+      "default": "Not just a Gift Card. A green light to go—full speed ahead."
+    },
+     {
+      "type": "text",
+      "id": "shop_btn_3",
+      "label": "Shop Button"
+    },
+    {
+      "type": "url",
+      "id": "url_3",
+      "label": "Column 3 URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three Column Feature",
+      "category": "Sections"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="three-column-section">
+  {% if section.settings.section_heading %}
+    <h2 class="section-heading">{{ section.settings.section_heading }}</h2>
+  {% endif %}
+
+  <div class="columns-container" style="display: flex; gap: 20px; flex-wrap: wrap;">
+    
+    <!-- Column 1 -->
+    <div class="column" style="flex: 1; min-width: 250px;">
+      {% if section.settings.image_1 %}
+        <img src="{{ section.settings.image_1 | img_url: 'medium' }}" alt="{{ section.settings.title_1 }}" style="width: 100%;"/>
+      {% endif %}
+      {% if section.settings.title_1 %}
+        <h3>{{ section.settings.title_1 }}</h3>
+      {% endif %}
+      {% if section.settings.desc_1 %}
+        <p>{{ section.settings.desc_1 }}</p>
+      {% endif %}
+      {% if section.settings.url_1 %}
+        <a  class="cst-shop-url" href="{{ section.settings.url_1 }}">{{ section.settings.shop_btn_1 }}</a>
+      {% endif %}
+    </div>
+
+    <!-- Column 2 -->
+    <div class="column" style="flex: 1; min-width: 250px;">
+      {% if section.settings.image_2 %}
+        <img src="{{ section.settings.image_2 | img_url: 'medium' }}" alt="{{ section.settings.title_2 }}" style="width: 100%;"/>
+      {% endif %}
+      {% if section.settings.title_2 %}
+        <h3>{{ section.settings.title_2 }}</h3>
+      {% endif %}
+      {% if section.settings.desc_2 %}
+        <p>{{ section.settings.desc_2 }}</p>
+      {% endif %}
+      {% if section.settings.url_2 %}
+        <a class="cst-shop-url" href="{{ section.settings.url_2 }}">{{ section.settings.shop_btn_2 }}</a>
+      {% endif %}
+    </div>
+
+    <!-- Column 3 -->
+    <div class="column" style="flex: 1; min-width: 250px;">
+      {% if section.settings.image_3 %}
+        <img src="{{ section.settings.image_3 | img_url: 'medium' }}" alt="{{ section.settings.title_3 }}" style="width: 100%;"/>
+      {% endif %}
+      {% if section.settings.title_3 %}
+        <h3>{{ section.settings.title_3 }}</h3>
+      {% endif %}
+      {% if section.settings.desc_3 %}
+        <p>{{ section.settings.desc_3 }}</p>
+      {% endif %}
+      {% if section.settings.url_3 %}
+        <a class="cst-shop-url" href="{{ section.settings.url_3 }}">{{ section.settings.shop_btn_3 }}</a>
+      {% endif %}
+    </div>
+
+  </div>
+</div>

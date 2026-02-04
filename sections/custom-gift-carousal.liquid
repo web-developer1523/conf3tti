@@ -1,0 +1,108 @@
+<div class="gift-carousel-wrapper page-width">
+  <div class="gift-carousel ">
+    {% for block in section.blocks %}
+      <a href="{{ block.settings.collection.url }}" class="gift-card">
+        {% if block.settings.card_image %}
+          <div class="gift-img-wrap">
+            <img src="{{ block.settings.card_image | img_url: '500x' }}" alt="{{ block.settings.card_title }}">
+          </div>
+        {% endif %}
+        <h3 class="gift-title">{{ block.settings.card_title }}</h3>
+        {% if block.settings.card_text %}
+          <p class="gift-desc">{{ block.settings.card_text }}</p>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% comment %} <div class="gift-carousel page-width">
+  {% for block in section.blocks %}
+    <a href="{{ block.settings.collection.url }}" class="gift-card">
+      {% if block.settings.card_image %}
+        <div class="gift-img-wrap">
+          <img src="{{ block.settings.card_image | img_url: '500x' }}" alt="{{ block.settings.card_title }}">
+        </div>
+      {% endif %}
+
+      <h3 class="gift-title">{{ block.settings.card_title }}</h3>
+      {% if block.settings.card_text %}
+        <p class="gift-desc">{{ block.settings.card_text }}</p>
+      {% endif %}
+    </a>
+  {% endfor %}
+</div> {% endcomment %}
+<style>
+  .gift-carousel-wrapper {
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.gift-carousel-wrapper.slider-loaded {
+  opacity: 1;
+}
+
+</style>
+<script>
+  $(document).ready(function(){  
+    $('.gift-carousel').on('init', function(){
+      $('.gift-carousel-wrapper').addClass('slider-loaded');
+    });
+
+    $('.gift-carousel').slick({  
+      dots: false,
+      autoplay: false,
+      slidesToShow: 4,
+      slidesToScroll: 1, 
+      infinite: false,
+      autoplaySpeed: 1000,
+      arrows: true,
+      centerMode: false,
+      speed: 1000,
+      responsive: [
+         {
+          breakpoint: 1025,
+          settings: {
+            arrows: true,
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 769,
+          settings: {
+            arrows: true,
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            slidesToShow: 1.5
+          }
+        }
+      ]
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Collection Carousel",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        { "type": "image_picker", "id": "card_image", "label": "Card Image" },
+        { "type": "text", "id": "card_title", "label": "Title" },
+        { "type": "text", "id": "card_text", "label": "Short Description" },
+        { "type": "collection", "id": "collection", "label": "Link to Collection" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Collection Carousel" }
+  ]
+}
+{% endschema %}

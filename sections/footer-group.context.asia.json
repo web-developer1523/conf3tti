@@ -1,0 +1,28 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "footer-group.json",
+  "context": {
+    "market": "asia"
+  },
+  "sections": {
+    "footer": {
+      "settings": {},
+      "blocks": {
+        "1e8a6f4f-f2a4-461b-8042-5c07bacebcb4": {
+          "settings": {
+            "newsletter_heading": "新朋友，你好！",
+            "newsletter_des": "<p>註冊即可享首次訂單85折優惠，並搶先獲得conf3tti的<br/>最新資訊！</p>"
+          }
+        }
+      }
+    }
+  }
+}

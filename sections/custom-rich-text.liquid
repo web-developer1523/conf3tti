@@ -1,0 +1,64 @@
+{% schema %}
+{
+  "name": "Rich text with button",
+  "tag": "section",
+  "class": "brand-text-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Presenting: the Gift Guide."
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Description",
+      "default": "<p>Order by 12pm to get it in time. *Exclusions apply.</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop Our Best Gifts"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rich text with button",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+<section class="brand-text brand-text--white page-width">
+  <div class="brand-text__container">
+    <div class="brand-text__content">
+      {% if section.settings.heading != blank %}
+        <h2 class="brand-text__title">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.subheading != blank %}
+        <p class="brand-text__subheading">
+          {{ section.settings.subheading }}
+        </p>
+      {% endif %}
+    </div>
+
+    {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <button class="cst-shop-btn">
+      <a class="brand-text__button"
+         href="{{ section.settings.button_link }}">
+        <span>{{ section.settings.button_label }}</span>
+      </a>
+    </button>
+    {% endif %}
+  </div>
+</section>

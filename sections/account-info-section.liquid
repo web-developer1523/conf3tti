@@ -1,0 +1,52 @@
+<div class="account-info-box">
+  <h2>Account Information</h2>
+
+  <div class="info-row">
+    <strong>First Name:</strong>
+    <span>{{ customer.first_name }}</span>
+  </div>
+
+  <div class="info-row">
+    <strong>Last Name:</strong>
+    <span>{{ customer.last_name }}</span>
+  </div>
+
+  <div class="info-row">
+    <strong>Email:</strong>
+    <span>{{ customer.email }}</span>
+  </div>
+
+  <a href="/account/addresses" class="edit-btn">Edit Account</a>
+</div>
+
+<style>
+  .account-info-box {
+    border: 1px solid #e5e5e5;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 500px;
+  }
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .info-row:last-child {
+    border-bottom: none;
+  }
+  .edit-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: black;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+</style>
+{% schema %}
+{
+  "name": "Account Info Section"
+}
+{% endschema %}

@@ -1,0 +1,84 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "custom_css": [],
+      "settings": {
+        "logo_position": "middle-left",
+        "mobile_logo_position": "center",
+        "menu": "main-menu-copy",
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "always",
+        "show_line_separator": true,
+        "color_scheme": "background-1",
+        "menu_color_scheme": "",
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "enable_customer_avatar": true,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "popup": {
+      "type": "popup",
+      "blocks": {
+        "7befa62b-91b1-4433-ab1d-e1086813fa50": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign up for 10% off!",
+            "heading_size": "h1"
+          }
+        },
+        "aa755874-085c-4b06-b5e5-753d02a90549": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Sign up for our newsletter to be the first to know of our launches and deals!<br/>Receive <strong>15% off no min spend </strong>on your first purchase with free shipping.</p>"
+          }
+        },
+        "a725c6a4-bfc4-4631-ba94-1b61cf06b474": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Use Code: <span style=\"text-decoration:underline\"><strong>MAKEITFUN</strong></span></p>"
+          }
+        },
+        "9ce5bbd9-8a91-4596-87a8-a604c2b4b3b0": {
+          "type": "email_form",
+          "settings": {
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "7befa62b-91b1-4433-ab1d-e1086813fa50",
+        "aa755874-085c-4b06-b5e5-753d02a90549",
+        "a725c6a4-bfc4-4631-ba94-1b61cf06b474",
+        "9ce5bbd9-8a91-4596-87a8-a604c2b4b3b0"
+      ],
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/campaign3op2.jpg",
+        "Subscribe": "Subscribe",
+        "email": "Enter  Email"
+      }
+    }
+  },
+  "order": [
+    "header",
+    "popup"
+  ]
+}

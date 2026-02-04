@@ -1,0 +1,241 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "custom_css": [],
+      "settings": {
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "rich_text_733EQz": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_hX7BF4": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "OUR STORY",
+            "heading_size": "h1"
+          }
+        },
+        "text_emHdhe": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p><strong>We could not find kidswear where high fashion meets high fun for, and that’s where it all began…</strong>  With conf3tti, we set out to bring this <strong>majorly functional, wonderfully comfortable and super fashion</strong> forward vision to life.<br/><br/>Our designs are inspired by the grown-up world of functional and premium high fashion, translated to appeal to a kid’s whimsical eye and withstand their active lifestyle.  conf3tti is made for fashion and fun: from running down the street to ice cream contests and all the adventure in between.  We see the world the way kids do - full of optimism and wonder.<strong>  With our feel-good fashion, conf3tti is a destination for all things joyful.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hX7BF4",
+        "text_emHdhe"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "scheme-38a37cd2-e4c9-4c32-926a-1ec25f0d526d",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_dArAWM": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_CDM7UX": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR FOUNDER",
+            "heading_size": "h1"
+          }
+        },
+        "text_NNMjhP": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A fitness fan and fashion expert, <strong>Joyce Hwang</strong> came from the world of luxury fashion and worked at lululemon for five years prior to starting conf3tti.  She founded conf3tti to combine her love of athleisure and fashion with her passion for all things #MomLife and kid-centric fun.</p><p>With two small daughters, Joyce’s family home is a headquarters of dress-up, make-believe, high fashion and high fun.  Influenced by her inventive dreams, fearless imaginations, and her girls’ VERY honest feedback, conf3tti was born.  Our own in-house extensive kid-centric focus groups, their out-there ideas and creative insights inspire all we make.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_CDM7UX",
+        "text_NNMjhP"
+      ],
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "right",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "5385b3e7-a012-4f7c-87ce-c4fa47b8f65f": {
+      "type": "about-image-with-text",
+      "blocks": {
+        "template--20466970100010__5385b3e7-a012-4f7c-87ce-c4fa47b8f65f-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR STORY",
+            "heading_size": "h1"
+          }
+        },
+        "template--20466970100010__5385b3e7-a012-4f7c-87ce-c4fa47b8f65f-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>We could not find kidswear where high fashion meets high fun for, and that’s where it all began…</strong>  With conf3tti, we set out to bring this <strong>majorly functional, wonderfully comfortable and super fashion forward </strong>vision to life.<br/><br/>Our designs are inspired by the grown-up world of functional and premium high fashion, translated to appeal to a kid’s whimsical eye and withstand their active lifestyle.  conf3tti is made for fashion and fun: from running down the street to ice cream contests and all the adventure in between.  We see the world the way kids do - full of optimism and wonder.<strong>  With our feel-good fashion, conf3tti is a destination for all things joyful.</strong></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--20466970100010__5385b3e7-a012-4f7c-87ce-c4fa47b8f65f-heading-1",
+        "template--20466970100010__5385b3e7-a012-4f7c-87ce-c4fa47b8f65f-text-1"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/campaign4_373f20fc-553d-4bda-97fd-d8dd04a026d0.jpg",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-38a37cd2-e4c9-4c32-926a-1ec25f0d526d",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "4a4d9b97-069f-46ce-8073-5708043bae35": {
+      "type": "image-banner-custom",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/IMG_1820.webp",
+        "image_behavior": "none",
+        "color_scheme": "scheme-38a37cd2-e4c9-4c32-926a-1ec25f0d526d",
+        "padding_top": 0,
+        "padding_bottom": 44
+      }
+    },
+    "021c416b-b73c-49f9-8f94-bf554bb7c91c": {
+      "type": "about-image-with-text",
+      "blocks": {
+        "8da23d49-72d5-495d-8b39-7b9ac8838c39": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR FOUNDER",
+            "heading_size": "h1"
+          }
+        },
+        "0d02e34a-1b85-447c-b62f-f070a3794d28": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A fitness fan and fashion expert, <strong>Joyce Hwang </strong>came from the world of luxury fashion and worked at lululemon for five years<strong> </strong>prior to starting conf3tti.  She founded conf3tti to <strong>combine her love of athleisure and fashion with her passion for all things #MomLife and kid-centric fun.</strong></p><p><strong>With two small daughters, Joyce’s family home is a headquarters of dress-up, make-believe, high fashion and high fun. </strong> Influenced by her inventive dreams, fearless imaginations, and her girls’ VERY honest feedback, conf3tti was born.  <strong>Our own in-house focus group, their out-there ideas and creative insights inspire all we make.</strong><br/></p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "8da23d49-72d5-495d-8b39-7b9ac8838c39",
+        "0d02e34a-1b85-447c-b62f-f070a3794d28"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG_2868.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "21468f0d-4454-4abb-8f4b-981eaaa14537": {
+      "type": "about-image-with-text",
+      "blocks": {
+        "706799a9-9a08-4b13-8c30-77cfe548dd49": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR COMMUNITY",
+            "heading_size": "h1"
+          }
+        },
+        "9599ce6b-d23d-4e5e-a5e7-ec9c0974fb26": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are a positive, colorful, and unabashedly authentic place where everyone is ALWAYS encouraged to be themselves! From our accessories to our crafts, our hope is to unleash self-expression, exploration, and play—allowing the super side of every kid to shine.</p><p>We believe it is important to stay educated on social issues, share resources, and give back. We support causes and organizations that align with our values of building a kind, inclusive, and joyful future for kids everywhere.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "706799a9-9a08-4b13-8c30-77cfe548dd49",
+        "9599ce6b-d23d-4e5e-a5e7-ec9c0974fb26"
+      ],
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Maya_149.webp",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-38a37cd2-e4c9-4c32-926a-1ec25f0d526d",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    },
+    "6838e319-0f34-47f4-80c1-70b44da8689d": {
+      "type": "image-banner-custom",
+      "settings": {
+        "image": "shopify://shop_images/campaign5_1.jpg",
+        "image_behavior": "none",
+        "color_scheme": "scheme-9db5ee6d-2130-4ffd-8e88-9a3c59e8968c",
+        "padding_top": 40,
+        "padding_bottom": 24
+      }
+    },
+    "7dba51ff-924d-4c3b-a95a-29e57763d354": {
+      "type": "image-banner-custom",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/About_3.jpg",
+        "image_behavior": "none",
+        "color_scheme": "scheme-38a37cd2-e4c9-4c32-926a-1ec25f0d526d",
+        "padding_top": 44,
+        "padding_bottom": 44
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_733EQz",
+    "rich_text_dArAWM",
+    "5385b3e7-a012-4f7c-87ce-c4fa47b8f65f",
+    "4a4d9b97-069f-46ce-8073-5708043bae35",
+    "021c416b-b73c-49f9-8f94-bf554bb7c91c",
+    "21468f0d-4454-4abb-8f4b-981eaaa14537",
+    "6838e319-0f34-47f4-80c1-70b44da8689d",
+    "7dba51ff-924d-4c3b-a95a-29e57763d354"
+  ]
+}

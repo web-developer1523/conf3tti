@@ -1,0 +1,123 @@
+{% schema %}
+{
+  "name": "Collection gifts",
+  "settings": [],
+  "presets": [
+    { "name": "Collection banner" }
+  ]
+}
+{% endschema %}
+
+<section class="collection-gifts page-width">
+  {% assign current_collection = collection %}
+
+  {%- comment -%} Banner from metafield {%- endcomment -%}
+  {% if current_collection.metafields.custom.banner_image != blank %}
+    <div class="collection-gifts__banner">
+      <img
+        src="{{ current_collection.metafields.custom.banner_image | image_url: width: 2000 }}"
+        alt="{{ current_collection.title | escape }}"
+        loading="lazy"
+      >
+    </div>
+  {% endif %}
+
+  {%- comment -%} Slider — only collection titles with URLs {%- endcomment -%}
+  {% assign gift_collections = current_collection.metafields.custom.gift_collections.value %}
+  {% if gift_collections != blank %}
+  <div class="collection-gifts__carousel-wrapper page-width">
+    <button type="button" class="collection-gifts__prev">‹</button>
+
+    <div class="collection-gifts__carousel">
+      {% for gift_col in gift_collections %}
+        <a href="{{ gift_col.url }}" class="collection-gifts__item-title slide-item">
+          {{ gift_col.title }}
+        </a>
+      {% endfor %}
+    </div>
+
+    <button type="button" class="collection-gifts__next">›</button>
+  </div>
+  {% endif %}
+</section>
+
+<style>
+  .collection-gifts__banner img {
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .collection-gifts__carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 30px auto;
+    padding:0 !important;
+    position: relative;
+        background: #cccccc17;
+  }
+
+  /* SHOW ONLY 4 ITEMS */
+  .collection-gifts__carousel {
+    display: flex;
+    gap: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 15px 5px;
+  }
+
+  .collection-gifts__carousel .slide-item {
+    flex: 0 0 calc(25% - 35px);
+    text-align: center;
+  }
+
+  .collection-gifts__item-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .collection-gifts__item-title:hover {
+    text-decoration: underline;
+  }
+
+  .collection-gifts__prev,
+  .collection-gifts__next {
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 5px 12px;
+    line-height: 1;
+    user-select: none;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".collection-gifts__carousel");
+    const prev = document.querySelector(".collection-gifts__prev");
+    const next = document.querySelector(".collection-gifts__next");
+
+    if (!carousel) return;
+
+    const item = carousel.querySelector(".slide-item");
+    if (!item) return;
+
+    const gap = 35;
+    const itemWidth = item.offsetWidth + gap;
+    const moveBy = itemWidth * 1; // Move by 4 items
+
+    prev.addEventListener("click", () => {
+      carousel.scrollBy({ left: -moveBy, behavior: "smooth" });
+    });
+
+    next.addEventListener("click", () => {
+      carousel.scrollBy({ left: moveBy, behavior: "smooth" });
+    });
+  });
+</script>

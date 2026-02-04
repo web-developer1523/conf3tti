@@ -1,0 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_custom_HqBPgN": {
+      "type": "image-banner-custom",
+      "name": "Custom image banner",
+      "settings": {
+        "image": "shopify://shop_images/Lunar_New_Year_Sales_1366_x_240_px.png",
+        "image_behavior": "none",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [
+        "/* .sp-grid-wishlist {display: none !important;}",
+        " */.button {--border-offset: none;}",
+        ".quick-add.no-js-hidden.test {position: absolute; top: 8px; left: 8px;}"
+      ],
+      "settings": {
+        "products_per_page": 8,
+        "columns_desktop": 4,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_custom_HqBPgN",
+    "banner",
+    "product-grid"
+  ]
+}

@@ -1,0 +1,17 @@
+window.addEventListener("load" ,function() {
+    
+setTimeout(function(){
+if(window.location.pathname == "/zh/pages/be-a-fun-friend"){
+  $("#cf_ram_guest_heading").text("成為一個有趣的朋友吧！");
+  $("#cf_ram_guest_subheading").text("向你的朋友推薦conf3tti，與他們分享首張訂單85折優惠！額外好處：他們首張訂單後，你更可獲得一次全單85折優惠！你這位有趣的朋友，真的值得擁有:)");
+  $("#cf_ram_guest_name_input").attr("placeholder","輸入你的姓名");
+  $("#cf_ram_guest_email_input").attr("placeholder","輸入你的電郵地址");
+$("#cf_ram_guest_submit_button").val("分享你的愛！");
+  
+}
+  },100);
+if(window.location.pathname.includes("/zh")){
+
+  $('[href="https://conf3tti.com/pages/be-a-fun-friend"]').attr("href","/zh/pages/be-a-fun-friend");
+}
+}) 

@@ -1,0 +1,142 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_custom_HqBPgN": {
+      "type": "image-banner-custom",
+      "name": "Custom image banner",
+      "settings": {
+        "image": "shopify://shop_images/Lunar_New_Year_Sales_1366_x_240_px.png",
+        "image_behavior": "none",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "custom_gift_carousal_NXLEfj": {
+      "type": "custom-gift-carousal",
+      "blocks": {
+        "slide_JjNmEw": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "card_image": "shopify://shop_images/37_1.jpg",
+            "card_title": "GIFTS FOR ALL",
+            "card_text": "Possibilities, packed and ready.",
+            "collection": "gifts-for-all"
+          }
+        },
+        "slide_nbt3zM": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Gift_for_Her.png",
+            "card_title": "GIFTS FOR HER",
+            "card_text": "For game time, street style, and chill time.",
+            "collection": "gifts-for-her"
+          }
+        },
+        "slide_NJEk4q": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Gift_for_Him.png",
+            "card_title": "GIFTS FOR HIM",
+            "card_text": "Moveable softness. A gift, every wear.",
+            "collection": "gifts-for-him"
+          }
+        },
+        "slide_GnMJh9": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Gift_Under_300.png",
+            "card_title": "GIFTS UNDER HK$300",
+            "card_text": "Maximum joy, minimum spend. Under HK$300.",
+            "collection": "gifts-under-300"
+          }
+        },
+        "slide_dwVLdV": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Gift_Under_500.png",
+            "card_title": "GIFTS UNDER HK$500",
+            "card_text": "Big fun, smart spend. All under HK$500.",
+            "collection": "gifts-under-500"
+          }
+        },
+        "slide_D4DTPL": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Accessories.png",
+            "card_title": "ACCESSORIES",
+            "card_text": "Festive hues, versatile staples.",
+            "collection": "all_accessories"
+          }
+        },
+        "slide_fPEyPk": {
+          "type": "slide",
+          "settings": {
+            "card_image": "shopify://shop_images/Gift_Card_3_bc0c1c5a-64fb-41f4-a02a-e31cb2d70296.png",
+            "card_title": "GIFT WITH INTENTION",
+            "card_text": "Let them choose their style!",
+            "collection": "gift-ideas-gift-card"
+          }
+        }
+      },
+      "block_order": [
+        "slide_JjNmEw",
+        "slide_nbt3zM",
+        "slide_NJEk4q",
+        "slide_GnMJh9",
+        "slide_dwVLdV",
+        "slide_D4DTPL",
+        "slide_fPEyPk"
+      ],
+      "name": "Collection Carousel",
+      "settings": {}
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "custom_css": [
+        "/* .sp-grid-wishlist {display: none !important;}",
+        " */.button {--border-offset: none;}",
+        ".quick-add.no-js-hidden.test {position: absolute; top: 8px; left: 8px;}"
+      ],
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "enable_filtering": true,
+        "filter_type": "vertical",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner_custom_HqBPgN",
+    "banner",
+    "custom_gift_carousal_NXLEfj",
+    "product-grid"
+  ]
+}

@@ -1,0 +1,76 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "03ec3983-45e1-4120-8b76-da255ffa5f4b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20484520214826__03ec3983-45e1-4120-8b76-da255ffa5f4b-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "{{ collection.title }}",
+            "heading_size": "h2"
+          }
+        },
+        "template--20484520214826__03ec3983-45e1-4120-8b76-da255ffa5f4b-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Introducing our new products collection, featuring cutting-edge designs and advanced features. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20484520214826__03ec3983-45e1-4120-8b76-da255ffa5f4b-heading-1",
+        "template--20484520214826__03ec3983-45e1-4120-8b76-da255ffa5f4b-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 60
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "03ec3983-45e1-4120-8b76-da255ffa5f4b",
+    "product-grid"
+  ]
+}

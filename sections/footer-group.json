@@ -1,0 +1,61 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "52cca829-7280-45c8-9166-eda4f36f26e1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "",
+            "menu": "footer"
+          }
+        },
+        "1e8a6f4f-f2a4-461b-8042-5c07bacebcb4": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_heading": "HI NEW FRIENDS!",
+            "email": "Enter  Email",
+            "sub": "Subscribe & Get 10% OFF!",
+            "newsletter_des": "<p>Sign up to get 10% off your first order and the inside scoop on all things conf3tti!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "52cca829-7280-45c8-9166-eda4f36f26e1",
+        "1e8a6f4f-f2a4-461b-8042-5c07bacebcb4"
+      ],
+      "custom_css": [
+        ".footer-block--newsletter {opacity: 1; transform: none;}",
+        ".copyright__content + .copyright__content a {display: NONE;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-38a37cd2-e4c9-4c32-926a-1ec25f0d526d",
+        "newsletter_enable": false,
+        "newsletter_heading": "Subscribe to our emails",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 48,
+        "padding_bottom": 8
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

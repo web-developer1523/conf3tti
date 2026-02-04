@@ -1,0 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "header-group.json",
+  "context": {
+    "market": "asia"
+  },
+  "sections": {
+    "popup": {
+      "settings": {},
+      "blocks": {
+        "7befa62b-91b1-4433-ab1d-e1086813fa50": {
+          "settings": {
+            "heading": "立即訂閱conf3tti，搶先獲得最新資訊， 首張訂單即享85折！"
+          }
+        }
+      }
+    }
+  }
+}

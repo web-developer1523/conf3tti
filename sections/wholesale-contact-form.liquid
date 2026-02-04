@@ -1,0 +1,559 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+.main-page-title {
+    margin: 0;
+    font-family: Plus Jakarta Sans,sans-serif;
+    font-size: 200%;
+    text-transform: none;
+    font-weight: 500;
+    font-style: normal;
+    color: #1c1b1b;
+    text-align: center;
+}
+.rich-text__text p a,
+.rich-text__text p {
+    font-size: 14px;
+    letter-spacing: 0;
+    color: #000;
+}
+.form-status-list.form__message {
+    font-weight: 400;
+    font-size: 14px;
+}
+#ContactForm
+.field__label {display: block;color: #000;font-size: 12px;top: 14px;}
+
+.field__input {
+    padding: 0;
+    height: 42px;
+}
+.contact-method label {
+    line-height: normal;
+    color: #000;
+    font-size: 12px;
+}
+
+.contact-method label:first-child {
+    display: block;
+    width: 100%;
+}
+
+.contact-method {display: flex;flex-wrap: wrap;align-items: center;margin-bottom: 20px;}
+
+.contact-method input {
+    margin-right: 10px;
+}
+
+.contact-method input + label {
+    margin-right: 30px;
+}
+.contact .field {
+    margin-bottom: 15px;
+}
+.field__input::placeholder, .customer .field input::placeholder {
+    opacity: 1;
+    color: #000;
+    font-size: 12px;
+transform: translateY(-2px);
+}
+
+#ContactForm .field__label {
+    display: block;
+    left: 14px;
+    padding: 0 5px;
+    line-height: normal;
+    color: #000;
+    font-size: 12px;
+    opacity: 0;
+    background: rgba(255,255,255,0);
+    pointer-events: none;
+    transform: translateY(3px);
+    bottom: calc(100% - 8px);
+    top: auto;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+    margin: 0;
+}
+#ContactForm textarea:not(:placeholder-shown) + .field__label,
+#ContactForm input:not(:placeholder-shown) + .field__label{
+opacity: 1;
+    background: white;
+    transform: translateY(0);
+}
+.contact__fields {
+    gap: 1;
+}
+
+.field__input:focus {
+    padding: 12px 19px;
+    outline: 0;
+    box-shadow: none;
+}
+
+.field:before,.field:after {
+    opacity: 0;
+}
+
+.field__input {
+    padding: 12px 19px !important;
+    border: 1px solid #000;
+}
+
+.contact__button {
+    margin-top: 20px;
+}
+
+.contact__button button {
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    font-weight: 700;
+}
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="title title-wrapper--no-top-margin inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+        {{ section.settings.heading }}
+      </h2>
+    {%- else -%}
+      <h2 class="visually-hidden">{{ 'templates.contact.form.title' | t }}</h2>
+    {%- endif -%}
+    {%- liquid
+      assign contact_form_class = 'isolate'
+      if settings.animations_reveal_on_scroll
+        assign contact_form_class = 'isolate scroll-trigger animate--slide-in'
+      endif
+    -%}
+    {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
+      {%- if form.posted_successfully? -%}
+        <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
+          {% render 'icon-success' %}
+          {{ 'templates.contact.form.post_success' | t }}
+        </h2>
+      {%- elsif form.errors -%}
+        <div class="form__message">
+          <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
+            {% render 'icon-error' %}
+            {{ 'templates.contact.form.error_heading' | t }}
+          </h2>
+        </div>
+        <ul class="form-status-list caption-large" role="list">
+          <li>
+            <a href="#ContactForm-email" class="link">
+              {{ form.errors.translated_fields.email | capitalize }}
+              {{ form.errors.messages.email }}
+            </a>
+          </li>
+        </ul>
+      {%- endif -%}
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.Company }}*"
+            type="text"
+            id="ContactForm-name"
+            name="contact[{{ section.settings.Company }}*]" required aria-required="true"
+            placeholder="{{ section.settings.Company }}*"
+          >
+          <label class="field__label" for="ContactForm-name">{{ section.settings.Company }}*</label>
+        </div>
+      <div class="contact__fields">
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.FirstName }}"
+            type="text"
+            id="ContactForm-fname"
+            name="contact[{{ section.settings.FirstName }}]"
+            placeholder="{{ section.settings.FirstName }}"
+          >
+          <label class="field__label" for="ContactForm-fname">{{ section.settings.FirstName }}</label>
+        </div>
+
+       <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.LastName }}"
+            type="text"
+            id="ContactForm-lname"
+            name="contact[{{ section.settings.LastName }}]" 
+            placeholder="{{ section.settings.LastName }}"
+          >
+          <label class="field__label" for="ContactForm-lname">{{ section.settings.LastName }}</label>
+        </div>
+
+      </div>
+
+
+
+    <div class="contact__fields">
+       <div class="field field--with-error">
+          <input
+            autocomplete="email"
+            type="email"
+            id="ContactForm-email"
+            class="field__input"
+            name="contact[email]"
+            spellcheck="false"
+            autocapitalize="off"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            aria-required="true"
+            {% if form.errors contains 'email' %}
+              aria-invalid="true"
+              aria-describedby="ContactForm-email-error"
+            {% endif %}
+            placeholder="{{ 'templates.contact.form.email' | t }}"
+          >
+          <label class="field__label" for="ContactForm-email">
+            {{- 'templates.contact.form.email' | t }}
+            <span aria-hidden="true">*</span></label
+          >
+          {%- if form.errors contains 'email' -%}
+            <small class="contact__field-error" id="ContactForm-email-error">
+              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+              <span class="form__message">
+                {%- render 'icon-error' -%}
+                {{- form.errors.translated_fields.email | capitalize }}
+                {{ form.errors.messages.email -}}
+              </span>
+            </small>
+          {%- endif -%}
+        </div>
+      <div class="field">
+        <input
+          type="tel"
+          id="ContactForm-phone"
+          class="field__input"
+          autocomplete="tel"
+          name="contact[{{ section.settings.phone }}*]"
+          pattern="[0-9\-]*"  aria-required="true" required
+          value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+          placeholder="{{ section.settings.phone }}*"
+        >
+        <label class="field__label" for="ContactForm-phone">{{ section.settings.phone }}*</label>
+      </div>
+    </div>
+      <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.StreetAddress }}*"
+            type="text"
+            id="ContactForm-sa"
+            name="contact[{{ section.settings.StreetAddress }}*]" required aria-required="true"
+            placeholder="{{ section.settings.StreetAddress }}*"
+          >
+          <label class="field__label" for="ContactForm-sa">{{ section.settings.StreetAddress }}*</label>
+        </div>
+      <div class="contact__fields">
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.City }}*"
+            type="text"
+            id="ContactForm-city"
+            name="contact[{{ section.settings.City }}*]"
+            placeholder="{{ section.settings.City }}* " required aria-required="true"
+          >
+          <label class="field__label" for="ContactForm-city">{{ section.settings.City }}*</label>
+        </div>
+
+       <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.ZipCode }}*"
+            type="text"
+            id="ContactForm-zip"
+            name="contact[{{ section.settings.ZipCode }}*]" 
+            placeholder="{{ section.settings.ZipCode }}*" required aria-required="true"
+          >
+          <label class="field__label" for="ContactForm-zip">{{ section.settings.ZipCode }}*</label>
+        </div>
+
+      </div>
+      <div class="contact__fields">
+        <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.State }}*"
+            type="text"
+            id="ContactForm-state"
+            name="contact[{{ section.settings.State }}*]"
+            placeholder="{{ section.settings.State }}*" required aria-required="true"
+          >
+          <label class="field__label" for="ContactForm-state">{{ section.settings.State }}*</label>
+        </div>
+
+       <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.CountryIfOutsideUnitedStates }}"
+            type="text"
+            id="ContactForm-v"
+            name="contact[{{ section.settings.CountryIfOutsideUnitedStates }}]" 
+            placeholder="{{ section.settings.CountryIfOutsideUnitedStates }}"
+          >
+          <label class="field__label" for="ContactForm-v">{{ section.settings.CountryIfOutsideUnitedStates }}</label>
+        </div>
+
+      </div>
+
+     <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.WhatOther }}"
+            type="text"
+            id="ContactForm-zi"
+            name="contact[{{ section.settings.WhatOther }}]" 
+            placeholder="{{ section.settings.WhatOther }}"
+          >
+          <label class="field__label" for="ContactForm-zi">{{ section.settings.WhatOther }}</label>
+        </div>
+         <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.onlineStore }}"
+            type="text"
+            id="ContactFormdd"
+            name="contact[{{ section.settings.onlineStore }}]" 
+            placeholder="{{ section.settings.onlineStore }}"
+          >
+          <label class="field__label" for="ContactFormdd">{{ section.settings.onlineStore }}</label>
+        </div>
+    <div class="field">
+          <input
+            class="field__input"
+            autocomplete="{{ section.settings.mortarStores }}"
+            type="text"
+            id="fdgsdgsdg"
+            name="contact[{{ section.settings.mortarStores }}]" 
+            placeholder="{{ section.settings.mortarStores }}"
+          >
+          <label class="field__label" for="fdgsdgsdg">{{ section.settings.mortarStores }}</label>
+        </div>
+<div class="contact-method">
+  <label for="contact-method">{{ section.settings.contactMethod }}</label>
+  <input type="checkbox" name="contact[Do you sell online (select/check off platforms) Other Option 1:]" value="{{ section.settings.Amazon }}" id="Amazon"><label for="Amazon">{{ section.settings.Amazon }}</label><br>
+  <input type="checkbox" name="contact[Do you sell online (select/check off platforms) Other Option 2:]" value="{{ section.settings.Ebay }}" id="Ebay"><label for="Ebay">{{ section.settings.Ebay }}</label><br>
+  <input type="checkbox" name="contact[Do you sell online (select/check off platforms) Other Option 3:]" value="{{ section.settings.Alibaba }}" id="Alibaba"><label for="Alibaba">{{ section.settings.Alibaba }}</label>
+</div>
+
+      <div class="field">
+        <textarea
+          rows="10"
+          id="ContactForm-body"
+          class="text-area field__input"
+          name="contact[{{ 'templates.contact.form.comment' | t }}]"
+          placeholder="{{ section.settings.comment }}"
+        >
+          {{- form.body -}}
+        </textarea>
+        <label class="form__label field__label" for="ContactForm-body">
+         {{ section.settings.comment }}
+        </label>
+      </div>
+      <div class="contact__button">
+        <button type="submit" class="button">
+         {{ section.settings.send }}  
+        </button>
+      </div>
+    {%- endform -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.contact-form.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Contact form",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "background-1"
+    },
+
+    {
+      "type": "text",
+      "id": "Company",
+      "default": "Company",
+      "label": "Company"
+    },
+{
+      "type": "text",
+      "id": "FirstName",
+      "default": "First Name",
+      "label": "First Name"
+    },
+    {
+      "type": "text",
+      "id": "LastName",
+      "default": "Last Name",
+      "label": "Last Name"
+    },
+        {
+      "type": "text",
+      "id": "phone",
+      "default": "Phone",
+      "label": "Phone"
+    },
+          {
+      "type": "text",
+      "id": "StreetAddress",
+      "default": "Street Address",
+      "label": "Street Address"
+    },
+          {
+      "type": "text",
+      "id": "City",
+      "default": "City",
+      "label": "City"
+    },
+          {
+      "type": "text",
+      "id": "ZipCode",
+      "default": "Zip Code",
+      "label": "Zip Code"
+    },
+          {
+      "type": "text",
+      "id": "State",
+      "default": "State",
+      "label": "State"
+    },
+
+         {
+      "type": "text",
+      "id": "CountryIfOutsideUnitedStates",
+      "default": "Country if outside United States",
+      "label": "Country if outside United States"
+    },
+        {
+      "type": "text",
+      "id": "WhatOther",
+      "default": "What other products and brands do you carry?",
+      "label": "What other products and brands do you carry?"
+    },
+          {
+      "type": "text",
+      "id": "onlineStore",
+      "default": "If you operate an online store, please provide the URL.",
+      "label": "If you operate an online store, please provide the URL."
+    },
+
+          {
+      "type": "text",
+      "id": "mortarStores",
+      "default": "Number of brick & mortar stores.",
+      "label": "Number of brick & mortar stores."
+    },
+          {
+      "type": "text",
+      "id": "contactMethod",
+      "default": "Do you sell online (select/check off platforms) Other Options:",
+      "label": "Do you sell online (select/check off platforms) Other Options:"
+    },
+          {
+      "type": "text",
+      "id": "Amazon",
+      "default": "Amazon",
+      "label": "Amazon"
+    },
+          {
+      "type": "text",
+      "id": "Ebay",
+      "default": "Ebay",
+      "label": "Ebay"
+    },
+          {
+      "type": "text",
+      "id": "Alibaba",
+      "default": "Alibaba",
+      "label": "Alibaba"
+    },
+         {
+      "type": "text",
+      "id": "comment",
+      "default": "Your message",
+      "label": "Your message"
+    },
+         {
+      "type": "text",
+      "id": "send",
+      "default": "Send message",
+      "label": "Send message"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Wholesale"
+    }
+  ]
+}
+{% endschema %}

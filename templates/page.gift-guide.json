@@ -1,0 +1,288 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_rich_text_YqbTTQ": {
+      "type": "custom-rich-text",
+      "name": "Rich text with button",
+      "settings": {
+        "heading": "Presenting: the Gift Guide.",
+        "subheading": "<p>Order by 12pm to get it in time. *Exclusions apply.</p>",
+        "button_label": "Shop Our Best Gifts",
+        "button_link": "#"
+      }
+    },
+    "rich_text_f7TCmR": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pYExnV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Presenting: the Gift Guide.",
+            "heading_size": "h1"
+          }
+        },
+        "text_FTbWz8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Order by 12pm PST, Dec. 22 to wrap up these must-haves by Dec. 24. *Exclusions apply.</p>"
+          }
+        },
+        "button_yQghNV": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Our Best gifts",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pYExnV",
+        "text_FTbWz8",
+        "button_yQghNV"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "custom_class": "rich-gift-guide",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "video_zicjA4": {
+      "type": "video",
+      "name": "t:sections.video.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify://files/videos/vecteezy_vibrant-high-angle-view-of-an-ecstatic-little-boy-with-curly_74146150.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify://shop_images/FT4Dphotoswithgreybg.png",
+        "description": "",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 20
+      }
+    },
+    "custom_image_video_section_NcKRnw": {
+      "type": "custom-image-video-section",
+      "name": "Image + Text + Video",
+      "settings": {
+        "custom_class": "cst-top-img-video",
+        "top_heading": "<p><strong>“I’d gift the Define Jacket—it’s a staple.”</strong></p>",
+        "image": "shopify://shop_images/Free-Gift-box-_-Glow-Tote.png",
+        "heading": "First place picks.",
+        "description": "<p>Buttery-soft gear in new, velvety flocked polka dot? Your gifting game just scored major points.</p>",
+        "button_label": "Shop Now",
+        "button_url": "#",
+        "video": "shopify://files/videos/vecteezy_vibrant-high-angle-view-of-an-ecstatic-little-boy-with-curly_74146150.mp4",
+        "enable_video_looping": true,
+        "reverse_layout": false,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "image_banner_ewjPkV": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "custom_class": "gift-banner-page",
+        "image": "shopify://shop_images/conf3tti_website_banner_mobile.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "custom_image_video_section_Xigqjb": {
+      "type": "custom-image-video-section",
+      "name": "Image + Text + Video",
+      "settings": {
+        "custom_class": "cst-bottom-img-video",
+        "top_heading": "<p><strong>“Gear that gets you excited to run is the game changer.”</strong></p>",
+        "image": "shopify://shop_images/36_c8a9e557-04ca-4b8e-9e1b-0943adb2e16a.jpg",
+        "heading": "Fly through winter.",
+        "description": "<p>Rob Watson knows how to make slow months feel faster: new run gear.</p>",
+        "button_label": "Shop Now",
+        "button_url": "#",
+        "video": "shopify://files/videos/vecteezy_vibrant-high-angle-view-of-an-ecstatic-little-boy-with-curly_74146150.mp4",
+        "enable_video_looping": true,
+        "reverse_layout": true,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "collage_kP96hb": {
+      "type": "collage",
+      "blocks": {
+        "image_B3NAQL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Copy_of_BEST_SELLER_post-2.png"
+          }
+        },
+        "product_LLmCVa": {
+          "type": "product",
+          "settings": {
+            "product": "apt-jogger-heather-grey",
+            "second_image": true
+          }
+        },
+        "collection_LwHawc": {
+          "type": "collection",
+          "settings": {
+            "collection": "boys_jackets-vests"
+          }
+        }
+      },
+      "block_order": [
+        "image_B3NAQL",
+        "product_LLmCVa",
+        "collection_LwHawc"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_grid_section_cnUtdY": {
+      "type": "custom-grid-section",
+      "name": "Two Column Gift Section",
+      "settings": {
+        "top_heading": "Find the Perfect Gift",
+        "image_1": "shopify://shop_images/43.png",
+        "heading_1": "$50 (and under) goes further with this gear.",
+        "description_1": "Every gift unlocks another rep, another rest, another possibility.",
+        "button_1_url": "",
+        "button_1_text": "Shop Gifts Under $50",
+        "image_2": "shopify://shop_images/1_2401f46f-da15-4605-a035-fc5093bcc4ce.png",
+        "heading_2": "Overindulgences. For under $100.",
+        "description_2": "Find sole-soothing slides, ready-for-anything bags, and more \"no-you-didn't\" gifts.",
+        "button_2_url": "",
+        "button_2_text": "Shop Gifts Under $100"
+      }
+    },
+    "custom_multicoumn_LhH8DU": {
+      "type": "custom-multicoumn",
+      "blocks": {
+        "column_UhaEJH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/8_085290fc-6f34-4632-9c8b-ae45929a8352.png",
+            "title": "Women's Matching Sets",
+            "link": ""
+          }
+        },
+        "column_EwAL9w": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/19_d29bb13f-8b3c-4608-9a73-56d194b5fe13.png",
+            "title": "Women's Matching Sets",
+            "link": ""
+          }
+        },
+        "column_rJUnb9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/46.png",
+            "title": "Women's Matching Sets",
+            "link": ""
+          }
+        },
+        "column_jQ9H64": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/24_d9e36777-c864-431b-a507-296ffc83c93d.png",
+            "title": "Women's Matching Sets",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_UhaEJH",
+        "column_EwAL9w",
+        "column_rJUnb9",
+        "column_jQ9H64"
+      ],
+      "name": "4 Column Image Grid",
+      "settings": {
+        "top_heading": "Don't stop at one perfect present.",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "custom_three_grid_TqrRKX": {
+      "type": "custom-three-grid",
+      "name": "Three Column Feature",
+      "settings": {
+        "section_heading": "Unwrap more ways to wow.",
+        "image_1": "shopify://shop_images/19_d29bb13f-8b3c-4608-9a73-56d194b5fe13.png",
+        "title_1": "You get the ribbon. These bring the bows.",
+        "desc_1": "The best part about gifting these shoes? Watching them step straight into any possibility.",
+        "shop_btn_1": "Shop Now",
+        "url_1": "#",
+        "image_2": "shopify://shop_images/10_f92f4e41-f4b3-48e3-a2db-51ee322aec71.png",
+        "title_2": "This gift goes everywhere.",
+        "desc_2": "Unbox a bag that's ready for every escape, errand, and adventure to come.",
+        "shop_btn_2": "Shop Now",
+        "url_2": "#",
+        "image_3": "shopify://shop_images/43.png",
+        "title_3": "Redeem the joy.",
+        "desc_3": "Not just a Gift Card. A green light to go—full speed ahead.",
+        "shop_btn_3": "Add Gift card",
+        "url_3": "#"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_rich_text_YqbTTQ",
+    "rich_text_f7TCmR",
+    "video_zicjA4",
+    "custom_image_video_section_NcKRnw",
+    "image_banner_ewjPkV",
+    "custom_image_video_section_Xigqjb",
+    "collage_kP96hb",
+    "custom_grid_section_cnUtdY",
+    "custom_multicoumn_LhH8DU",
+    "custom_three_grid_TqrRKX"
+  ]
+}

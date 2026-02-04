@@ -1,0 +1,367 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+<style>
+  #shopify-section-{{ section.id }} .candinavia_slider_container {
+    width: 100%;
+    background-color: {{ section.settings.background_color }};
+  }
+  #shopify-section-{{ section.id }} .candinavia_data {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px;
+    position: relative;
+    z-index: 3;
+  }
+  #shopify-section-{{ section.id }} .candinavia_heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 45px;
+  }
+  #shopify-section-{{ section.id }} .candinavia_heading h1 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0;
+    color: {{ section.settings.heading_color }};
+  }
+  #shopify-section-{{ section.id }} .video_slide {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    cursor: pointer;
+  }
+  #shopify-section-{{ section.id }} .video_slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+  }
+  #shopify-section-{{ section.id }} .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 117px;
+    height: 117px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+  }
+  #shopify-section-{{ section.id }} .play-btn i {
+    /* font-size: 50px; */
+    color: #000;
+  }
+  #shopify-section-{{ section.id }} .video_slide.playing .play-btn {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #shopify-section-{{ section.id }} .candy_next,
+  #shopify-section-{{ section.id }} .candy_prev {
+    color: {{ section.settings.arrow_color }} !important;
+    display: flex !important;
+  }
+  #shopify-section-{{ section.id }} .candy_next::after,
+  #shopify-section-{{ section.id }} .candy_prev::after {
+    /* font-size: 25px !important; */
+  }
+  #shopify-section-{{ section.id }} .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  #shopify-section-{{ section.id }} .video_slide2 {
+    background: transparent !important;
+  }
+
+  @media screen and (max-width: 1100px) {
+    #shopify-section-{{ section.id }} .play-btn {
+      width: 60px;
+      height: 60px;
+    }
+    #shopify-section-{{ section.id }} .play-btn i {
+      /* font-size: 20px; */
+    }
+  }
+  @media screen and (max-width: 650px) {
+    #shopify-section-{{ section.id }} .candinavia_heading{
+      margin-bottom: 30px;
+    }
+    #shopify-section-{{ section.id }} .candinavia_heading h1 {
+      /* font-size: 30px; */
+    }
+  }
+</style>
+
+<div class="candinavia_slider_container" id="shopify-section-{{ section.id }}">
+  <div class="candinavia_data">
+    <div class="candinavia_heading">
+      <h1>{{ section.settings.heading }}</h1>
+    </div>
+    <div class="swiper mySwiper candySwiper">
+      <div class="swiper-wrapper">
+        {% for block in section.blocks %}
+          {% if block.settings.mp4_url != blank or block.settings.webm_url != blank %}
+            <div class="swiper-slide video_slide2" {{ block.shopify_attributes }}>
+              <div class="video_slide" data-video-index="{{ forloop.index0 }}">
+                <video 
+                  {% if block.settings.thumbnail %}poster="{{ block.settings.thumbnail | image_url }}"{% endif %}
+                  controls
+                  playsinline
+                  preload="metadata"
+                >
+                  {% if block.settings.webm_url %}
+                    <source src="{{ block.settings.webm_url }}" type="video/webm">
+                  {% endif %}
+                  {% if block.settings.mp4_url %}
+                    <source src="{{ block.settings.mp4_url }}" type="video/mp4">
+                  {% endif %}
+                  Your browser does not support the video tag.
+                </video>
+                <div class="play-btn">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="swiper-button-next candy_next"></div>
+      <div class="swiper-button-prev candy_prev"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Swiper
+    var swiper = new Swiper("#shopify-section-{{ section.id }} .candySwiper", {
+      slidesPerView: {{ section.settings.desktop_slides }},
+      spaceBetween: 20,
+      navigation: {
+        nextEl: "#shopify-section-{{ section.id }} .swiper-button-next",
+        prevEl: "#shopify-section-{{ section.id }} .swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: {{ section.settings.mobile_slides }},
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: {{ section.settings.tablet_slides }},
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: {{ section.settings.desktop_slides }},
+          spaceBetween: 20,
+        }
+      }
+    });
+
+    // Video play functionality
+    document.querySelectorAll('#shopify-section-{{ section.id }} .video_slide').forEach((slide) => {
+      const video = slide.querySelector('video');
+      const playBtn = slide.querySelector('.play-btn');
+      
+      // Click handler for play button
+      playBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        slide.classList.add('playing');
+        video.play();
+        video.setAttribute('controls', 'true');
+      });
+      
+      // Pause video when it ends
+      video.addEventListener('ended', function() {
+        slide.classList.remove('playing');
+        video.removeAttribute('controls');
+      });
+      
+      // Pause video when clicking outside
+      slide.addEventListener('click', function(e) {
+        if (e.target !== playBtn && !playBtn.contains(e.target)) {
+          video.pause();
+          slide.classList.remove('playing');
+          video.removeAttribute('controls');
+        }
+      });
+    });
+    
+    // Pause videos when changing slides
+    swiper.on('slideChange', function() {
+      document.querySelectorAll('#shopify-section-{{ section.id }} .video_slide').forEach((slide) => {
+        const video = slide.querySelector('video');
+        if (!video.paused) {
+          video.pause();
+          slide.classList.remove('playing');
+          video.removeAttribute('controls');
+        }
+      });
+    });
+    
+    // Pause videos when they're not visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            const video = entry.target.querySelector('video');
+            if (video && !video.paused) {
+              video.pause();
+              entry.target.classList.remove('playing');
+              video.removeAttribute('controls');
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    
+    document.querySelectorAll('#shopify-section-{{ section.id }} .video_slide').forEach((slide) => {
+      observer.observe(slide);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Video Testimonials Slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Real Reactions, Real Love for Candynavia!"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Slider Settings"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Navigation Arrow Color",
+      "default": "#29b1c3"
+    },
+    {
+      "type": "range",
+      "id": "desktop_slides",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Slides Per View (Desktop)",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "tablet_slides",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Slides Per View (Tablet)",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "mobile_slides",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Slides Per View (Mobile)",
+      "default": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "text",
+          "id": "mp4_url",
+          "label": "MP4 Video URL",
+          "info": "Upload MP4 video to Shopify Files and paste URL here"
+        },
+        {
+          "type": "text",
+          "id": "webm_url",
+          "label": "WebM Video URL",
+          "info": "Upload WebM video to Shopify Files and paste URL here"
+        },
+        {
+          "type": "image_picker",
+          "id": "thumbnail",
+          "label": "Thumbnail Image",
+          "info": "Optional - Displayed before video plays"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Testimonials Slider",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "video"
+        },
+        {
+          "type": "video"
+        },
+        {
+          "type": "video"
+        },
+        {
+          "type": "video"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

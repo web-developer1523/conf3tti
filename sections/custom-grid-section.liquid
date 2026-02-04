@@ -1,0 +1,127 @@
+{% schema %}
+{
+  "name": "Two Column Gift Section",
+  "settings": [
+            {
+        "type": "text",
+        "id": "top_heading",
+        "label": "Top Heading",
+        "default": "Find the Perfect Gift"
+        },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Left Column Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Left Column Heading",
+      "default": "$50 (and under) goes further with this gear."
+    },
+    {
+      "type": "textarea",
+      "id": "description_1",
+      "label": "Left Column Description",
+      "default": "Every gift unlocks another rep, another rest, another possibility."
+    },
+    {
+      "type": "url",
+      "id": "button_1_url",
+      "label": "Left Column Button URL"
+    },
+    {
+      "type": "text",
+      "id": "button_1_text",
+      "label": "Left Column Button Text",
+      "default": "Shop Gifts Under $50"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Right Column Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Right Column Heading",
+      "default": "Overindulgences. For under $100."
+    },
+    {
+      "type": "textarea",
+      "id": "description_2",
+      "label": "Right Column Description",
+      "default": "Find sole-soothing slides, ready-for-anything bags, and more \"no-you-didn't\" gifts."
+    },
+    {
+      "type": "url",
+      "id": "button_2_url",
+      "label": "Right Column Button URL"
+    },
+    {
+      "type": "text",
+      "id": "button_2_text",
+      "label": "Right Column Button Text",
+      "default": "Shop Gifts Under $100"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Two Column Gift Section",
+      "category": "Sections"
+    }
+  ]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+.two-column-gifts {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.gift-column {
+  flex: 1 1 45%;
+  text-align: left;
+}
+.gift-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+.gift-column h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.gift-column p {
+  margin-bottom: 1rem;
+}
+
+{% endstylesheet %}
+<div class="cst-top-head">
+  {% if section.settings.top_heading %}
+  <h1 class="two-column-gifts__heading">{{ section.settings.top_heading }}</h1>
+{% endif %}
+</div>
+<div class="two-column-gifts">
+
+  <div class="gift-column">
+    {% if section.settings.image_1 %}
+      <img src="{{ section.settings.image_1 | image_url }}" alt="{{ section.settings.heading_1 }}">
+    {% endif %}
+    <h2>{{ section.settings.heading_1 }}</h2>
+    <p>{{ section.settings.description_1 }}</p>
+    <a href="{{ section.settings.button_1_url }}" class="button">{{ section.settings.button_1_text }}</a>
+  </div>
+
+  <div class="gift-column">
+    {% if section.settings.image_2 %}
+      <img src="{{ section.settings.image_2 | image_url }}" alt="{{ section.settings.heading_2 }}">
+    {% endif %}
+    <h2>{{ section.settings.heading_2 }}</h2>
+    <p>{{ section.settings.description_2 }}</p>
+    <a href="{{ section.settings.button_2_url }}" class="button">{{ section.settings.button_2_text }}</a>
+  </div>
+</div>

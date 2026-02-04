@@ -1,0 +1,400 @@
+<section class="styled-by-you-section {{ section.settings.custom_css_Class }}">
+  <div class="page-width">
+
+    {% if section.settings.top_left_badge != blank %}
+      <div class="corner-badge top-left">
+        <img
+          src="{{ section.settings.top_left_badge | image_url: width: 200 }}"
+          alt="Top Left Badge"
+          loading="lazy"
+        >
+      </div>
+    {% endif %}
+
+    {% if section.settings.bottom_right_badge != blank %}
+      <div class="corner-badge bottom-right">
+        <img
+          src="{{ section.settings.bottom_right_badge | image_url: width: 200 }}"
+          alt="Bottom Right Badge"
+          loading="lazy"
+        >
+      </div>
+    {% endif %}
+
+    {% if section.settings.heading != blank %}
+      <h2 class="styled-heading">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    {% if section.settings.description != blank %}
+      <p class="styled-description">{{ section.settings.description }}</p>
+    {% endif %}
+
+    <div class="styled-carousel-wrapper">
+      {% comment %} <button class="carousel-arrow prev" aria-label="Previous">&#10094;</button>  {% endcomment %}
+
+
+      {% comment %} image arrow code start {% endcomment %}
+        {% if section.settings.arrow_left != blank %}
+      <button class="carousel-arrow prev" aria-label="Previous">
+        <img
+          src="{{ section.settings.arrow_left | image_url: width: 60 }}"
+          alt="Previous"
+          loading="lazy"
+        >
+      </button>
+    {% endif %} 
+    {% comment %} image arrow code end {% endcomment %}
+      <div class="styled-carousel">
+        {% for block in section.blocks %}
+          <div class="styled-item" {{ block.shopify_attributes }}>
+
+            {% if block.settings.link != blank %}
+              <a href="{{ block.settings.link }}" class="styled-image-wrapper">
+            {% else %}
+              <div class="styled-image-wrapper">
+            {% endif %}
+
+              {% if block.settings.image != blank %}
+                <img
+                  src="{{ block.settings.image | image_url: width: 600 }}"
+                  alt="{{ block.settings.text | escape }}"
+                  loading="lazy"
+                >
+              {% endif %}
+
+              <div class="styled-overlay">
+                <span>SHOP NOW</span>
+              </div>
+
+            {% if block.settings.link != blank %}
+              </a>
+            {% else %}
+              </div>
+            {% endif %}
+          <a href="{{ block.settings.link }}" class="styled-image-wrapper">
+            {% if block.settings.text != blank %}
+              <p class="styled-text">{{ block.settings.text }}</p>
+            {% endif %}
+          </a>
+          </div>
+        {% endfor %}
+      </div>
+
+      {% comment %} <button class="carousel-arrow next" aria-label="Next">&#10095;</button>  {% endcomment %}
+       {% if section.settings.arrow_right != blank %}
+  <button class="carousel-arrow next" aria-label="Next">
+    <img
+      src="{{ section.settings.arrow_right | image_url: width: 60 }}"
+      alt="Next"
+      loading="lazy"
+    >
+  </button>
+{% endif %} 
+
+    </div>
+  </div>
+</section>
+
+<style>
+.styled-by-you-section {
+  padding: 60px 0;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  overflow-x:hidden;
+}
+
+.styled-heading {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.styled-description {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.styled-carousel-wrapper {
+  position: relative;
+  {% comment %} display: flex;
+  align-items: center; {% endcomment %}
+}
+.styled-by-you-section button.carousel-arrow.prev.slick-arrow {
+    position: absolute;
+    left: -17px;
+    top: 40%;
+}
+
+.styled-by-you-section button.carousel-arrow.next.slick-arrow {
+    position: absolute;
+    left: auto;
+    right: -12px;
+    bottom: 50%;
+}
+.styled-carousel {
+  width: 100%;
+}
+
+.styled-carousel .slick-slide {
+  padding: 0 12px;
+}
+{% comment %} 
+.styled-carousel {
+  margin: 0 -12px;
+} {% endcomment %}
+
+.styled-image-wrapper {
+  position: relative;
+  display: block;
+}
+
+.styled-image-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.styled-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #fff !important;
+}
+
+.styled-image-wrapper:hover .styled-overlay {
+  opacity: 1;
+}
+
+.styled-text {
+  margin-top: 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.carousel-arrow {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 5;
+}
+/* Corner badge base */
+.corner-badge {
+  position: absolute;
+  z-index: 20;
+  animation: badgeFloat 3s ease-in-out infinite;
+}
+
+.corner-badge img {
+  width: 110px;
+  height: auto;
+  display: block;
+}
+
+.corner-badge.top-left {
+    position: absolute;
+    top: 90px;
+    left: 130px;
+}
+
+/* Bottom Right */
+.corner-badge.bottom-right {
+  bottom: 40px;
+  right: 90px;
+  animation-delay: 1.2s;
+  position: absolute;
+}
+.styled-item a {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+.styled-item a:hover {
+    text-decoration: underline !important;
+    font-weight: 400 !important;
+}
+
+/* Floating animation */
+@keyframes badgeFloat {
+  0% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 1041px) {
+.corner-badge.bottom-right {
+    bottom: 4px;
+    right: 10px;
+}
+.corner-badge.top-left {
+    position: absolute;
+    top: 90px;
+   left: 0;
+}
+}
+@media (max-width: 768px) {
+  .corner-badge img {
+    width: 90px;
+  }
+
+  .corner-badge.top-left {
+    top: 90px;
+    left: 20px;
+  }
+
+  .corner-badge.bottom-right {
+    bottom: 20px;
+    right: 30px;
+  }
+}
+@media (max-width: 426px) {
+  .corner-badge img {
+    width: 80px;
+  }
+  .corner-badge.top-left {
+    top: 108px;
+    left: 11px;
+}
+
+}
+
+</style>
+
+<script>
+(function () {
+
+  function initStyledByYou(section) {
+    const slider = section.querySelector('.styled-carousel');
+    const prev = section.querySelector('.carousel-arrow.prev');
+    const next = section.querySelector('.carousel-arrow.next');
+
+    if (!slider || !window.jQuery) return;
+
+    if ($(slider).hasClass('slick-initialized')) {
+      $(slider).slick('unslick');
+    }
+
+    $(slider).slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: prev,
+      nextArrow: next,
+      dots: false,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: { slidesToShow: 3 }
+        },
+        {
+          breakpoint: 768,
+          settings: { slidesToShow: 2 }
+        },
+        {
+          breakpoint: 480,
+          settings: { slidesToShow: 1 }
+        }
+      ]
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.styled-by-you-section').forEach(initStyledByYou);
+  });
+
+  document.addEventListener('shopify:section:load', function (event) {
+    const section = event.target.querySelector('.styled-by-you-section');
+    if (section) initStyledByYou(section);
+  });
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Styled By You Carousel",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "STYLED BY YOU"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description",
+      "default": "Click to shop the looks you love!"
+    },
+    {
+    "type": "image_picker",
+    "id": "top_left_badge",
+    "label": "Top Left Corner Badge"
+    },
+    {
+      "type": "image_picker",
+      "id": "bottom_right_badge",
+      "label": "Bottom Right Corner Badge"
+    },
+        {
+        "type": "image_picker",
+        "id": "arrow_left",
+        "label": "Carousel Left Arrow"
+      },
+      {
+        "type": "image_picker",
+        "id": "arrow_right",
+        "label": "Carousel Right Arrow"
+      },
+      {
+        "type": "text",
+        "id": "custom_css_Class",
+        "label": "Custom CSS Class"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text below image",
+          "default": "@influencername"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Shop Now Link"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Styled By You Carousel",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}

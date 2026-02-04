@@ -1,0 +1,264 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+<style>
+.custom-merch-section {
+  width: 100%;
+  background-color: {{ section.settings.background_color }};
+}
+.custom-merch-data {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px 0 40px;
+}
+.custom-merch-flex {
+  width: 100%;
+  display: flex;
+  gap: 0 60px;
+}
+.content {
+  width: 50%;
+  margin-top: 70px;
+}
+.merch_para {
+  width: 100%;
+  max-width: 412px;
+  margin: 22px 0 35px;
+}
+.merch_head h1 {
+  font-weight: 600;
+  font-size: 60px;
+  margin: 0;
+  line-height: 1.2;
+  color: {{ section.settings.text_color }};
+  letter-spacing: 1px;
+}
+.merch_para p {
+    font-family: 'Helvetica' !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    color: {{ section.settings.text_color }} ;
+}
+.merch_button i {
+  font-size: 14px;
+}
+.merch_button a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: {{ section.settings.button_background_color }} ;
+  padding: 10px 8px 10px 27px;
+  width: 284px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+  color: {{ section.settings.button_text_color }};
+  line-height: 1.2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.merch_button a:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+.merch_button span {
+  /* background-color: {{ section.settings.button_arrow_bg }};
+  padding: 5px;
+  border-radius: 50%; */
+  height: 33px;
+  width: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:white;
+}
+.image-container {
+  width: 50%;
+}
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 80px;
+  margin-bottom: -15%;
+}
+#mob_image {
+  display: none;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  .merch_head h1 {
+    font-size: 42px;
+  }
+  .image-container img {
+    top: 66px;
+    margin-bottom: -29%;
+  }
+}
+@media (max-width: 950px) {
+  .merch_head h1 {
+    font-size: 30px;
+  }
+  .content {
+    margin-top: 50px;
+  }
+  .image-container img {
+    top: 60px;
+    margin-bottom: -16%;
+  }
+  .merch_para {
+    margin: 20px 0 25px;
+  }
+}
+@media (max-width: 767px) {
+  .custom-merch-data {
+    padding: 0 15px 0 15px;
+  }
+  .custom-merch-flex {
+    flex-direction: column;
+    text-align: left;
+  }
+  .content {
+    width: 100%;
+  }
+  .image-container {
+    width: 100%;
+  }
+  .image-container img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    top: 70px;
+    display: none;
+  }
+  #mob_image {
+    display: block;
+    margin-bottom: -100px;
+  }
+  .merch_head h1 {
+    font-size: 32px;
+  }
+  .merch_para {
+    max-width: 100%;
+    margin: 20px 0 27px;
+  }
+  .merch_para p {
+    font-size: 16px;
+  }
+}
+</style>
+
+<div class="custom-merch-section">
+  <div class="custom-merch-data">
+    <div class="custom-merch-flex">
+      <div class="content">
+        <div class="merch_head" data-aos="slide-up" data-aos-once="true" data-aos-duration="1500">
+          <h1>{{ section.settings.heading }}</h1>
+        </div>
+        <div class="merch_para" data-aos="slide-up" data-aos-once="true" data-aos-duration="1500">
+          <p>{{ section.settings.paragraph }}</p>
+        </div>
+        {% if section.settings.button_text != blank %}
+          <div class="merch_button" data-aos="slide-up" data-aos-once="true" data-aos-duration="1500">
+            <a href="{{ section.settings.button_link }}">
+              {{ section.settings.button_text }} 
+              <span><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </div>
+        {% endif %}
+      </div>
+      <div class="image-container" data-aos="slide-up" data-aos-once="true" data-aos-duration="1500">
+        {% if section.settings.desktop_image != blank %}
+          <img src="{{ section.settings.desktop_image | image_url }}" alt="{{ section.settings.desktop_image.alt }}" />
+        {% endif %}
+        {% if section.settings.mobile_image != blank %}
+          <img id="mob_image" src="{{ section.settings.mobile_image | image_url }}" alt="{{ section.settings.mobile_image.alt }}">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Merch Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "CUSTOM MERCH"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Paragraph Text",
+      "default": "Because your brand deserves more than generic swag. From concept, design, creation, and fulfillment, we'll bring your vision to life."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "START YOUR PROJECT"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id":"button_background_color",
+      "label": "Button Backgroud Color",
+      "default":"#000"
+    },
+    {
+      "type": "color",
+      "id": "button_arrow_bg",
+      "label": "Button Arrow Background",
+      "default": "#e8ef6e"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Merch Section",
+      "category": "Custom Sections"
+    }
+  ]
+}
+{% endschema %}

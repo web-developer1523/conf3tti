@@ -1,0 +1,1250 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "838a6712-f317-4ea4-a069-bbe6d035fafd": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_zH3qGV": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Copy_of_IceLux_Collection_Description_Banner_2240_x_1000_px_Website.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP TRAVEL",
+            "link": "shopify://collections/best-sellers-1",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--19522633695530__838a6712-f317-4ea4-a069-bbe6d035fafd-168900937710bc8626-0": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/1_3bbbb7e8-3094-4ee4-9c1f-b4a1f4bdea17.png",
+            "heading": "",
+            "heading_size": "h0",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "box_align": "bottom-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_qfVdMi": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/2_9f0fbb5b-d5ab-4dc6-9c4b-bb67bcbdcb27.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify://collections/new-products",
+            "button_style_secondary": false,
+            "box_align": "bottom-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_rAjLQz": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/2_670be7e7-009f-4f9b-af9e-4547d590c2de.png",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "SHOP NOW",
+            "link": "shopify://products/dance-dream-skort-candy-orange",
+            "button_style_secondary": false,
+            "box_align": "bottom-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_wQDJyd": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/New_Icelux_1122a506-075b-4dd3-bfb8-ff33e85f1cce.png",
+            "heading": "",
+            "heading_size": "h2",
+            "subheading": "",
+            "button_label": "LEARN MORE",
+            "link": "shopify://collections/icelux",
+            "button_style_secondary": true,
+            "box_align": "bottom-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_zH3qGV",
+        "template--19522633695530__838a6712-f317-4ea4-a069-bbe6d035fafd-168900937710bc8626-0",
+        "slide_qfVdMi",
+        "slide_rAjLQz",
+        "slide_wQDJyd"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".button {border: 1px solid #ffff; font-family: \"Poppins\"; font-weight: 600; font-size: larger; background: transparent;}",
+        "@media only screen and (min-width: 600px) {.banner--desktop-transparent .banner__box {background: transparent; margin-top: 30rem; }}"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "image_banner_i4XJEx": {
+      "type": "image-banner",
+      "blocks": {
+        "buttons_PxNAGp": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "shopify://collections/gift-ideas",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "buttons_PxNAGp"
+      ],
+      "custom_css": [
+        "@media only screen and (min-width: 769px) {.banner__box.content-container.gradient {position: absolute; padding-top: 0; margin: 0; }}",
+        "@media only screen and (max-width: 749px) {.banner__box.content-container.gradient {position: absolute; bottom: -20px; }}",
+        ".button.button--secondary {border: 0px solid; background: black; color: white;}",
+        ".button::after {box-shadow: none; border: 1px solid black;}",
+        ".button::after:hover {box-shadow: none; border: 1px solid black;}"
+      ],
+      "settings": {
+        "custom_class": "cst-main-banner",
+        "image": "shopify://shop_images/Lunar_New_Year_Hero_Banner_1366x768_dfd5e1b0-12fc-4fff-a8bb-2eab7a414a9c.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-757dc89b-6681-4aa7-8cae-76eebf1fd50f",
+        "image_behavior": "none",
+        "mobile_image": "shopify://shop_images/Lunar_New_Year_Banner_Mobile_640_x_900_px.png",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "show_scroll_arrow": false,
+        "scroll_target_id": "MainContentNew"
+      }
+    },
+    "custom_collection_three_xDiDec": {
+      "type": "custom-collection-three",
+      "blocks": {
+        "collection_gNUTU6": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-jackets-vests"
+          }
+        },
+        "collection_WAHAfg": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-tops"
+          }
+        },
+        "collection_ffUCfJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-bottoms"
+          }
+        }
+      },
+      "block_order": [
+        "collection_gNUTU6",
+        "collection_WAHAfg",
+        "collection_ffUCfJ"
+      ],
+      "name": "3 Collection Boxes",
+      "settings": {
+        "custom_css_Class": "cst-main-all",
+        "custom_css_id": "MainContentNew"
+      }
+    },
+    "collection_list_49UyRf": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_4HULWU": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "performance-solar-visor"
+          }
+        },
+        "featured_collection_GKK69U": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "chase-the-rainbow-sets"
+          }
+        },
+        "featured_collection_tfzAWz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hide-your-treasure-packable-jacket"
+          }
+        },
+        "featured_collection_CeENJx": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "goal-getter-crop-tee"
+          }
+        },
+        "featured_collection_npiWmY": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "conf3tti-cap"
+          }
+        },
+        "featured_collection_hiq77U": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "champion-vent-tee"
+          }
+        },
+        "featured_collection_K4yacB": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "daydream-mini-jelly-bag"
+          }
+        },
+        "featured_collection_EVzJBf": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dance-dream-skort"
+          }
+        },
+        "featured_collection_6hE8x8": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bopper-pants-1"
+          }
+        },
+        "featured_collection_QtbGDw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "motivate-uv-protective-sets"
+          }
+        },
+        "featured_collection_7b73tw": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "oh-so-comfy-set"
+          }
+        },
+        "featured_collection_XW3R9c": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "excursion-cargo-short"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_4HULWU",
+        "featured_collection_GKK69U",
+        "featured_collection_tfzAWz",
+        "featured_collection_CeENJx",
+        "featured_collection_npiWmY",
+        "featured_collection_hiq77U",
+        "featured_collection_K4yacB",
+        "featured_collection_EVzJBf",
+        "featured_collection_6hE8x8",
+        "featured_collection_QtbGDw",
+        "featured_collection_7b73tw",
+        "featured_collection_XW3R9c"
+      ],
+      "custom_css": [],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "PARENT'S PICKS",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 5,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_css_class": "cst-collection-spotlight"
+      }
+    },
+    "testimonial_slides_Fagcmb": {
+      "type": "testimonial-slides",
+      "blocks": {
+        "image_block_XDMhPm": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/littlehoman.png",
+            "text": "@littlehoman_",
+            "link": "shopify://products/hide-your-treasures-packable-jacket-ice-water"
+          }
+        },
+        "image_block_YKTAeH": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/ana_r.png",
+            "text": "@ana_r",
+            "link": "shopify://products/power-up-tie-front-short-sleeve-vanilla-ice"
+          }
+        },
+        "image_block_DqaKBi": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/stephie_joyce.png",
+            "text": "@stephie_joyce",
+            "link": "shopify://products/chase-the-rainbow-tight"
+          }
+        },
+        "image_block_xceKU6": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/ropata_sg.png",
+            "text": "@ropata_sg",
+            "link": "shopify://products/daydream-mini-jelly-bag-frozen-blue"
+          }
+        },
+        "image_block_tB6Qhn": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/aliana__tancheva.png",
+            "text": "@aliana__tancheva",
+            "link": "shopify://products/hide-your-treasures-packable-jacket-summer-white"
+          }
+        },
+        "image_block_QxkwXV": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/lorrainekiangmalingue.png",
+            "text": "@lorrainekiangmalingue",
+            "link": "shopify://products/dance-dream-skort-ice-water"
+          }
+        },
+        "image_block_Y7mwpa": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/candicechanchao.png",
+            "text": "@candicechanchao",
+            "link": "shopify://products/goal-getter-crop-tee-summer-white"
+          }
+        },
+        "image_block_RjnfKy": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/makiw3104.png",
+            "text": "@makiw3104",
+            "link": "shopify://products/chase-the-rainbow-crop-tank"
+          }
+        },
+        "image_block_TL3wL8": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/5b27b6c6786fbd0dd3b8228b0c11e5ad.png",
+            "text": "@meepquest",
+            "link": "shopify://products/performance-solar-visor-ice-water"
+          }
+        },
+        "image_block_qBt9Gt": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/ngaialice.png",
+            "text": "@ngaialice",
+            "link": "shopify://products/striped-delight-open-back-short-sleeve-top-copy"
+          }
+        },
+        "image_block_H9RkTm": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/meepquest.png",
+            "text": "@meepquest",
+            "link": "shopify://products/hide-your-treasures-packable-jacket-birds-egg-green"
+          }
+        },
+        "image_block_Ey8mmf": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/stephie_joyce_1.png",
+            "text": "@stephie_joyce",
+            "link": "shopify://products/goal-getter-crop-tee-popcorn"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_XDMhPm",
+        "image_block_YKTAeH",
+        "image_block_DqaKBi",
+        "image_block_xceKU6",
+        "image_block_tB6Qhn",
+        "image_block_QxkwXV",
+        "image_block_Y7mwpa",
+        "image_block_RjnfKy",
+        "image_block_TL3wL8",
+        "image_block_qBt9Gt",
+        "image_block_H9RkTm",
+        "image_block_Ey8mmf"
+      ],
+      "name": "Styled By You Carousel",
+      "settings": {
+        "heading": "STYLED BY YOU",
+        "description": "CLICK TO SHOP THE LOOKS YOU LOVE!",
+        "arrow_left": "shopify://shop_images/download.svg",
+        "arrow_right": "shopify://shop_images/download_1_1.svg",
+        "custom_css_Class": "cst-stylled-main"
+      }
+    },
+    "image_with_text_HEhNfH": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nTkUHz": {
+          "type": "heading",
+          "settings": {
+            "heading": "HOLIDAY BONUS: GIFT BOX & GLOW TOTE",
+            "heading_size": "h2"
+          }
+        },
+        "text_AfpWN8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Spend over HK$1000 and Get a Free Gift Box & Glow Tote! </p>",
+            "text_style": "body"
+          }
+        },
+        "button_xpX8Ej": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/shop-all"
+          }
+        }
+      },
+      "block_order": [
+        "heading_nTkUHz",
+        "text_AfpWN8",
+        "button_xpX8Ej"
+      ],
+      "disabled": true,
+      "name": "Free Gift Banner",
+      "settings": {
+        "image": "shopify://shop_images/Free-Gift-box-_-Glow-Tote.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_kgnwMX": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_Ym899d": {
+          "type": "heading",
+          "settings": {
+            "heading": "GIFT WITH INTENTION",
+            "heading_size": "h2"
+          }
+        },
+        "text_8QUMwD": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Take the guesswork out of gifting and give them the present that always fits.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_3gD8Rk": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP GIFT CARDS",
+            "button_link": "shopify://products/e-gift-card"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ym899d",
+        "text_8QUMwD",
+        "button_3gD8Rk"
+      ],
+      "name": "Gift Card Banner",
+      "settings": {
+        "image": "shopify://shop_images/gift-card-banner.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "43bb2052-d204-44cd-b808-f9e725c84601": {
+      "type": "all-products",
+      "disabled": true,
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".collection__description {text-align: center;}",
+        ".collection__view-all {margin-top: 0px; text-transform: uppercase;}",
+        ".button {--border-offset: none;}",
+        "@media only screen and (max-width: 600px) {.button {font-size: 12px !important; padding: 0; margin: 0; line-height: 0; min-height: 35px; }}"
+      ],
+      "name": "Gift Guide",
+      "settings": {
+        "title": "GIFT GUIDE",
+        "text_color": "{{ section.settings.collection.metafields.custom.colors.value.color | metafield_text }}",
+        "class": "full-width  px-90 the-product-slider the-loader the-product-slider-3",
+        "heading_size": "h2",
+        "description": "<p>FIND THE PERFECT PRESENT FOR EVERY KID ON YOUR LIST.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "gifts-for-all",
+        "products_to_show": 25,
+        "products_to_show_mobile": 4,
+        "columns_desktop": 5,
+        "columns_desktop_mobile": 2,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-757dc89b-6681-4aa7-8cae-76eebf1fd50f",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "image_with_text_c7H4kV": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6nTpgK": {
+          "type": "heading",
+          "settings": {
+            "heading": "FREE GIFT",
+            "heading_size": "h2"
+          }
+        },
+        "text_MXHGwR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Spend over HK$1000 and Get a Free Gift Box & Glow Tote! </p>",
+            "text_style": "body"
+          }
+        },
+        "button_ddtwm3": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP NOW",
+            "button_link": "shopify://collections/shop-all"
+          }
+        }
+      },
+      "block_order": [
+        "heading_6nTpgK",
+        "text_MXHGwR",
+        "button_ddtwm3"
+      ],
+      "disabled": true,
+      "name": "Free Gift Banner",
+      "settings": {
+        "image": "shopify://shop_images/gift_box.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "scheme-56cd1884-8860-4ebe-9080-aae285824ee3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "8a81fb83-ae9f-4a5f-b800-5018e20a8fc5": {
+      "type": "all-products",
+      "disabled": true,
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".collection__description {text-align: center;}",
+        ".collection__view-all {margin-top: 40px;}"
+      ],
+      "name": "WHAT'S NEW",
+      "settings": {
+        "title": "WHAT'S NEW",
+        "text_color": "{{ section.settings.collection.metafields.custom.colors.value.color | metafield_text }}",
+        "class": "full-width  px-90 the-product-slider the-loader the-product-slider-4",
+        "heading_size": "h2",
+        "description": "<p>The newest kid's jewelry and gifts!</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "new-products",
+        "products_to_show": 25,
+        "products_to_show_mobile": 4,
+        "columns_desktop": 4,
+        "columns_desktop_mobile": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-757dc89b-6681-4aa7-8cae-76eebf1fd50f",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "all_products_WLQ7cd": {
+      "type": "all-products",
+      "disabled": true,
+      "name": "Best Sellers",
+      "settings": {
+        "title": "BEST SELLERS",
+        "text_color": "{{ section.settings.collection.metafields.custom.colors.value.color | metafield_text }}",
+        "class": "full-width  px-90 the-product-slider the-loader the-product-slider-3",
+        "heading_size": "h2",
+        "description": "<p>THE ONE EVERYONE WANTS.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "summer-sales-bestsellers",
+        "products_to_show": 25,
+        "products_to_show_mobile": 4,
+        "columns_desktop": 4,
+        "columns_desktop_mobile": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-38a37cd2-e4c9-4c32-926a-1ec25f0d526d",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "all_products_xH6xP4": {
+      "type": "all-products",
+      "disabled": true,
+      "settings": {
+        "title": "NEW ARRIVALS",
+        "text_color": "{{ section.settings.collection.metafields.custom.colors.value.color | metafield_text }}",
+        "class": "full-width  px-90 the-product-slider the-loader the-product-slider-3",
+        "heading_size": "h2",
+        "description": "<p>YOUR SUMMER REFRESH IS HERE.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "new-products",
+        "products_to_show": 25,
+        "products_to_show_mobile": 4,
+        "columns_desktop": 5,
+        "columns_desktop_mobile": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-757dc89b-6681-4aa7-8cae-76eebf1fd50f",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "image_banner_b8Mwgc": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_jCGV47": {
+          "type": "heading",
+          "settings": {
+            "heading": "THE ULTIMATE COMFORT",
+            "heading_size": "h1"
+          }
+        },
+        "buttons_jN3tqK": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Explore Our Jackets",
+            "button_link_1": "shopify://collections/all_clothing_jackets-vests",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_jCGV47",
+        "buttons_jN3tqK"
+      ],
+      "disabled": true,
+      "settings": {
+        "custom_class": "cst-home-banner",
+        "image": "shopify://shop_images/4_91f6200c-d4dd-4ea7-acb3-7db17e5ea343.png",
+        "image_2": "shopify://shop_images/5.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "show_scroll_arrow": true,
+        "scroll_target_id": ""
+      }
+    },
+    "image_banner_9Cgppi": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_qityYe": {
+          "type": "heading",
+          "settings": {
+            "heading": "ULTRALIGHT· UV JACKET",
+            "heading_size": "h0"
+          }
+        },
+        "buttons_c6bQGH": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NOW",
+            "button_link_1": "shopify://collections/hide-your-treasures",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_qityYe",
+        "buttons_c6bQGH"
+      ],
+      "disabled": true,
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/7.jpg",
+        "image_2": "shopify://shop_images/41_4f0c064c-08ef-4e07-ae81-e8c5a1e93ead.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-0afd25c9-e089-44e6-96d8-7451c797514d",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "show_scroll_arrow": true,
+        "scroll_target_id": ""
+      }
+    },
+    "all_products_KtKJHp": {
+      "type": "all-products",
+      "disabled": true,
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".collection__description {text-align: center;}",
+        ".collection__view-all {margin-top: 0px; text-transform: uppercase;}",
+        ".button {--border-offset: none;}",
+        "@media only screen and (max-width: 600px) {.button {font-size: 12px !important; padding: 0; margin: 0; line-height: 0; min-height: 35px; }}"
+      ],
+      "settings": {
+        "title": "<strong>CARRY HER COLORFUL DAYDREAMS</strong>",
+        "text_color": "{{ section.settings.collection.metafields.custom.colors.value.color | metafield_text }}",
+        "class": "full-width  px-90 the-product-slider the-loader the-product-slider-3",
+        "heading_size": "h2",
+        "description": "<p>PICK HER PERFECT SHADE OF FUN.</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "daydream-mini-jelly-kelly-bags",
+        "products_to_show": 25,
+        "products_to_show_mobile": 4,
+        "columns_desktop": 4,
+        "columns_desktop_mobile": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-757dc89b-6681-4aa7-8cae-76eebf1fd50f",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "9ec957b3-f1dd-44a1-ba32-7ba606847b4e": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "custom_class": "",
+        "image": "shopify://shop_images/IceLux_Collection_Website_4.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "show_scroll_arrow": true,
+        "scroll_target_id": ""
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "custom_class": "",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "inverse",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false,
+        "show_scroll_arrow": true,
+        "scroll_target_id": ""
+      }
+    },
+    "all_products_Ugcdmk": {
+      "type": "all-products",
+      "disabled": true,
+      "custom_css": [
+        "{text-align: center;}"
+      ],
+      "settings": {
+        "title": "TOPS",
+        "text_color": "{{ section.settings.collection.metafields.custom.colors.value.color | metafield_text }}",
+        "class": "full-width  px-90 the-product-slider the-loader the-product-slider-3",
+        "heading_size": "h2",
+        "description": "<p>ELEVATED TOPS FOR LITTLE TRENDSETTERS</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "tops",
+        "products_to_show": 25,
+        "products_to_show_mobile": 4,
+        "columns_desktop": 4,
+        "columns_desktop_mobile": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-38a37cd2-e4c9-4c32-926a-1ec25f0d526d",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "49ed4a03-ae64-476f-ae5e-2646ce630f3e": {
+      "type": "all-products",
+      "disabled": true,
+      "custom_css": [
+        "h2 {text-align: center;}",
+        ".collection__description {text-align: center;}",
+        ".collection__view-all {margin-top: 40px;}"
+      ],
+      "settings": {
+        "title": "BOTTOMS",
+        "text_color": "{{ section.settings.collection.metafields.custom.colors.value.color | metafield_text }}",
+        "class": "full-width  px-90 the-product-slider the-loader the-product-slider-4",
+        "heading_size": "h2",
+        "description": "<p>FUNCTIONAL BOTTOMS FOR THE COOL KIDS</p>",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "bottoms",
+        "products_to_show": 25,
+        "products_to_show_mobile": 4,
+        "columns_desktop": 4,
+        "columns_desktop_mobile": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-38a37cd2-e4c9-4c32-926a-1ec25f0d526d",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 56,
+        "padding_bottom": 80
+      }
+    },
+    "a2adc75b-f221-4191-a3ad-bdd7c496d7a5": {
+      "type": "testimonials",
+      "blocks": {
+        "template--19522633695530__a2adc75b-f221-4191-a3ad-bdd7c496d7a5-16889249589d9dfbf1-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“Inspired by fine jewelry, these baubles will tempt grown-ups and children alike.”</p>",
+            "image": "shopify://shop_images/vogue_21aec953-5201-4033-af3c-b375a42d3a0e.webp",
+            "text_style": "body"
+          }
+        },
+        "f603ebfc-12b6-40b7-b569-a3fb7241a923": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“A children’s jewelry line so luxe, you’ll want to wear it yourself.”</p>",
+            "image": "shopify://shop_images/image_2.png",
+            "text_style": "body"
+          }
+        },
+        "0b90ed3f-7b1f-4cb7-848f-ab135b191b2c": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“It’s for anyone — girls, boys. It’s meant to let their imagination run wild.”</p>",
+            "image": "shopify://shop_images/wwd_c2f78447-4297-4e25-a38f-0f002621ba34_2.png",
+            "text_style": "body"
+          }
+        },
+        "d27f5777-471f-4013-9897-e441ef10f39a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>“Kids’ jewelry and accessories that even adults will fawn over.”</p>",
+            "image": "shopify://shop_images/refinery29_2c6a95c7-095e-4482-938c-5961ca3c05f3_2.webp",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--19522633695530__a2adc75b-f221-4191-a3ad-bdd7c496d7a5-16889249589d9dfbf1-1",
+        "f603ebfc-12b6-40b7-b569-a3fb7241a923",
+        "0b90ed3f-7b1f-4cb7-848f-ab135b191b2c",
+        "d27f5777-471f-4013-9897-e441ef10f39a"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".rte img {max-width: 100px;}",
+        ".banner__box {max-width: 450px; margin: 0 auto;}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/confetti-june2023-108-websize-64a9a70a2c285.webp",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-38a37cd2-e4c9-4c32-926a-1ec25f0d526d",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "custom_image_text_wg9cWk": {
+      "type": "custom-image-text",
+      "disabled": true,
+      "name": "Custom Merch Section",
+      "settings": {
+        "heading": "CUSTOM MERCH",
+        "paragraph": "Because your brand deserves more than generic swag. From concept, design, creation, and fulfillment, we'll bring your vision to life.",
+        "button_text": "START YOUR PROJECT",
+        "button_link": "",
+        "desktop_image": "shopify://shop_images/AdobeStock_522414419_5.png",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "button_text_color": "#ffffff",
+        "button_background_color": "#000000",
+        "button_arrow_bg": "#e8ef6e"
+      }
+    },
+    "custom_img_with_text02_CwtmPi": {
+      "type": "custom-img-with-text02",
+      "disabled": true,
+      "name": "Worth Wearing Out",
+      "settings": {
+        "heading": "WORTH WEARING OUT",
+        "paragraph": "Elevate your brand merch to a retail-quality daily staple anyone would rep.",
+        "image_large": "shopify://shop_images/Screenshot2025-04-15at10.55.08AM.png",
+        "image_small": "shopify://shop_images/AdobeStock_522414419_5.png",
+        "text_color": "#1a1a1a",
+        "border_color": "#c4c7c7",
+        "padding_bottom": 60
+      }
+    },
+    "17507723311a7471fb": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_rJFEtw": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_rJFEtw"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "testimonial_NhB4DJ": {
+      "type": "testimonial",
+      "blocks": {
+        "testimonial_PGqxdW": {
+          "type": "testimonial",
+          "settings": {
+            "use_dark_style": false,
+            "customer_image": "shopify://shop_images/Oval.png",
+            "customer_name": "Mark Ramirez",
+            "customer_title": "Owner of Luna's Inc",
+            "testimonial_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt diam vel neque rhoncus, nec sagittis urna dignissim. Mauris nec tincidunt leo. Curabitur facilisis,"
+          }
+        },
+        "testimonial_YMTrh6": {
+          "type": "testimonial",
+          "settings": {
+            "use_dark_style": false,
+            "customer_image": "shopify://shop_images/Oval.png",
+            "customer_name": "Mark Ramirez",
+            "customer_title": "Owner of Luna's Inc",
+            "testimonial_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt diam vel neque rhoncus, nec sagittis urna dignissim. Mauris nec tincidunt leo. Curabitur facilisis,"
+          }
+        },
+        "testimonial_qWXjjE": {
+          "type": "testimonial",
+          "settings": {
+            "use_dark_style": false,
+            "customer_image": "shopify://shop_images/Oval.png",
+            "customer_name": "Mark Ramirez",
+            "customer_title": "Owner of Luna's Inc",
+            "testimonial_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt diam vel neque rhoncus, nec sagittis urna dignissim. Mauris nec tincidunt leo. Curabitur facilisis,"
+          }
+        },
+        "testimonial_wzaKpd": {
+          "type": "testimonial",
+          "settings": {
+            "use_dark_style": false,
+            "customer_image": "shopify://shop_images/Oval.png",
+            "customer_name": "Mark Ramirez",
+            "customer_title": "Owner of Luna's Inc",
+            "testimonial_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt diam vel neque rhoncus, nec sagittis urna dignissim. Mauris nec tincidunt leo. Curabitur facilisis,"
+          }
+        },
+        "testimonial_4Q8dmD": {
+          "type": "testimonial",
+          "settings": {
+            "use_dark_style": false,
+            "customer_image": "shopify://shop_images/Oval.png",
+            "customer_name": "Mark Ramirez",
+            "customer_title": "Owner of Luna's Inc",
+            "testimonial_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt diam vel neque rhoncus, nec sagittis urna dignissim. Mauris nec tincidunt leo. Curabitur facilisis,"
+          }
+        },
+        "testimonial_b4nnJw": {
+          "type": "testimonial",
+          "settings": {
+            "use_dark_style": false,
+            "customer_image": "shopify://shop_images/Oval.png",
+            "customer_name": "Mark Ramirez",
+            "customer_title": "Owner of Luna's Inc",
+            "testimonial_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt diam vel neque rhoncus, nec sagittis urna dignissim. Mauris nec tincidunt leo. Curabitur facilisis,"
+          }
+        },
+        "testimonial_jbVXgD": {
+          "type": "testimonial",
+          "settings": {
+            "use_dark_style": false,
+            "customer_image": "shopify://shop_images/Oval.png",
+            "customer_name": "Mark Ramirez",
+            "customer_title": "Owner of Luna's Inc",
+            "testimonial_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt diam vel neque rhoncus, nec sagittis urna dignissim. Mauris nec tincidunt leo. Curabitur facilisis,"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_PGqxdW",
+        "testimonial_YMTrh6",
+        "testimonial_qWXjjE",
+        "testimonial_wzaKpd",
+        "testimonial_4Q8dmD",
+        "testimonial_b4nnJw",
+        "testimonial_jbVXgD"
+      ],
+      "disabled": true,
+      "name": "Testimonial Swiper",
+      "settings": {
+        "section_bg_color": "#ffffff",
+        "padding_top": 80,
+        "padding_bottom": 50,
+        "padding_top_mobile": 100,
+        "padding_bottom_mobile": 50,
+        "heading_text": "FROM OUR CUSTOMERS!",
+        "heading_color": "#000000",
+        "heading_size": 24,
+        "heading_line_height": 1.2,
+        "card_bg_color": "#ffffff",
+        "card_text_color": "#1e1e1e",
+        "dark_card_bg_color": "#000000",
+        "dark_card_text_color": "#ffffff",
+        "card_border_radius": 20,
+        "card_padding": 48,
+        "next_btn_bg": "#ffd800",
+        "prev_btn_bg": "#ffffff",
+        "btn_border_color": "#000000",
+        "btn_icon_color": "#000000",
+        "btn_border_width": 1,
+        "btn_border_radius": 12
+      }
+    }
+  },
+  "order": [
+    "838a6712-f317-4ea4-a069-bbe6d035fafd",
+    "image_banner_i4XJEx",
+    "custom_collection_three_xDiDec",
+    "collection_list_49UyRf",
+    "testimonial_slides_Fagcmb",
+    "image_with_text_HEhNfH",
+    "image_with_text_kgnwMX",
+    "43bb2052-d204-44cd-b808-f9e725c84601",
+    "image_with_text_c7H4kV",
+    "8a81fb83-ae9f-4a5f-b800-5018e20a8fc5",
+    "all_products_WLQ7cd",
+    "all_products_xH6xP4",
+    "image_banner_b8Mwgc",
+    "image_banner_9Cgppi",
+    "all_products_KtKJHp",
+    "9ec957b3-f1dd-44a1-ba32-7ba606847b4e",
+    "image_banner",
+    "all_products_Ugcdmk",
+    "49ed4a03-ae64-476f-ae5e-2646ce630f3e",
+    "a2adc75b-f221-4191-a3ad-bdd7c496d7a5",
+    "custom_image_text_wg9cWk",
+    "custom_img_with_text02_CwtmPi",
+    "17507723311a7471fb",
+    "testimonial_NhB4DJ"
+  ]
+}

@@ -1,0 +1,89 @@
+<div class="custom-carousel swiper">
+  <div class="swiper-wrapper">
+    {% for block in section.blocks %}
+      <a class="swiper-slide card" href="{{ block.settings.link }}" {{ block.shopify_attributes }}>
+        <h3 class="card-title">{{ block.settings.title }}</h3>
+        {% if block.settings.image %}
+          <img src="{{ block.settings.image | img_url: '600x' }}" alt="{{ block.settings.title }}">
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<script>
+  new Swiper('.custom-carousel', {
+    slidesPerView: 2,
+    spaceBetween: 24,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      768: { slidesPerView: 3 },
+      1024: { slidesPerView: 5 }
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Image + Heading Carousel",
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Carousel Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "settings": [],
+  "presets": [
+    {
+      "name": "Image + Heading Carousel",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.card {
+  text-align: center;
+  display: block;
+}
+.card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+}
+</style>
